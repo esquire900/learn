@@ -1,0 +1,239 @@
+/** 
+ * Navbar
+ */
+.navbar-default {
+  background-color: #3e3e3e;
+  min-height: 60px;
+  border: none;
+  padding-top: 5px;
+  font-size: 17px;
+}
+.navbar-default .navbar-brand {
+  color: #fff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #f0f2f5;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #f0f2f5;
+}
+.navbar-default .navbar-nav>li>a {
+  color: #fff;
+}
+.navbar-brand {
+  font-size: 20px;
+}
+/**
+ * Border radius automated.
+ */
+body {
+  overflow-x: hidden;
+}
+.greyBackground {
+  background-color: #f0f2f5;
+}
+.btn {
+  -webkit-border-radius: 0px 0px 0px 0px;
+  -moz-border-radius: 0px 0px 0px 0px;
+  border-radius: 0px 0px 0px 0px;
+}
+.btn-wide {
+  width: 100%;
+}
+.form-control {
+  -webkit-border-radius: 0px 0px 0px 0px;
+  -moz-border-radius: 0px 0px 0px 0px;
+  border-radius: 0px 0px 0px 0px;
+}
+#login-form input {
+  margin-top: 20px;
+  height: 50px;
+  font-size: 1.6em;
+}
+#registration-form input {
+  margin-top: 20px;
+  height: 50px;
+  width: 100%;
+  font-size: 1.6em;
+}
+.dragcontainer {
+  margin-top: -70px;
+}
+.container {
+  width: 1000px;
+}
+.memContainer {
+  width: 400px;
+  position: absolute;
+  background-color: #f0f2f5;
+  -webkit-box-shadow: 0px 2px 2px #969696;
+  -moz-box-shadow: 0px 2px 2px #969696;
+  box-shadow: 0px 2px 2px #969696;
+  padding: 15px;
+  padding-top: 5px;
+  min-height: 250px;
+  top: 80px;
+  left: 20px;
+  z-index: 1005;
+}
+.untiedMemContainer {
+  width: 400px;
+  position: absolute;
+  background-color: #f0f2f5;
+  -webkit-box-shadow: 0px 2px 2px #969696;
+  -moz-box-shadow: 0px 2px 2px #969696;
+  box-shadow: 0px 2px 2px #969696;
+  padding: 15px;
+  padding-top: 5px;
+  min-height: 150px;
+  max-height: 95%;
+  top: 80px;
+  right: 20px;
+  overflow: auto;
+  z-index: 1005;
+}
+.untiedmem {
+  padding-top: 0px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  font-size: 17px;
+}
+.helpContainer {
+  width: 400px;
+  position: absolute;
+  background-color: #f0f2f5;
+  -webkit-box-shadow: 0px 2px 2px #969696;
+  -moz-box-shadow: 0px 2px 2px #969696;
+  box-shadow: 0px 2px 2px #969696;
+  padding: 15px;
+  padding-top: 5px;
+  height: 150px;
+  top: 20px;
+  margin-left: auto;
+  display: block;
+  margin-right: auto;
+  width: 200px;
+  z-index: 1005;
+  position: relative;
+}
+.iframeMindMap {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  min-height: 600px;
+  overflow-x: hidden;
+  border: 1px solid #f0f2f5;
+}
+.savebutton-normal {
+  background-color: #fff;
+  border: 0px;
+}
+.savebutton-saved {
+  background-color: #bfd841;
+  border: 0px;
+}
+.savebutton-unsaved {
+  background-color: #f3754f;
+  border: 0px;
+}
+.overviewContainer {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  width: 230px;
+  height: 230px;
+  padding: 20px;
+  margin: 10px;
+  margin-left: 0px;
+  float: left;
+}
+.question {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+}
+.wcontainer {
+  background-color: #fff;
+  height: auto;
+  padding: 20px;
+  margin: 10px;
+  -webkit-box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+/*
+	---------------------------------- Practice page -------------------------
+ */
+.questionContainer {
+  background-color: #fff;
+  height: auto;
+  min-height: 300px;
+  padding: 20px;
+  -webkit-box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  margin-top: 40px;
+}
+.writeStatedAnswer {
+  background-color: #f0f2f5;
+  min-height: 70px;
+  padding: 20px;
+  margin: 20px;
+}
+.writeAnswer {
+  background-color: #fff;
+  min-height: 70px;
+  padding: 20px;
+}
+/*-----------------------------------------------------------------------------------*/
+/*  PARALAX
+/*-----------------------------------------------------------------------------------*/
+.parallax {
+  text-align: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  min-height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  border-bottom: 5px solid #3e3e3e;
+}
+.parallax .inner {
+  padding: 0;
+}
+.parallax.mobile {
+  background-attachment: scroll !important;
+}
+.parallax h1 {
+  color: #ededed;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 60px;
+  display: block;
+  margin-bottom: 50px;
+}
+.header-text {
+  color: #fff;
+  background-color: rgba(0,0,0,0.4);
+  padding: 20px;
+}
+.index-icon {
+  font-size: 70px;
+  color: #00ada7;
+}

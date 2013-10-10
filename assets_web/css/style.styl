@@ -1,0 +1,216 @@
+Grey = rgba(150,150,150,1)
+// GreyLight = #DCDCDC
+GreyLight = #F0F2F5
+GreyDark = #3E3E3E
+Yellow = #F8F2AB
+Green = #BFD841
+Red = #F3754F
+White = #FFFFFF
+Blue = #00ADA7
+
+
+/** 
+ * Navbar
+ */
+
+.navbar-default
+    background-color GreyDark
+    min-height 60px
+    border none
+    padding-top 5px
+    font-size 17px
+    .navbar-brand
+        color white
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus
+    color: GreyLight;
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus 
+	color: GreyLight;
+
+.navbar-default .navbar-nav>li>a
+    color white
+.navbar-brand    
+    font-size 20px
+
+
+/**
+ * Border radius automated.
+ */
+border-radius()
+	-webkit-border-radius arguments
+	-moz-border-radius arguments
+	border-radius arguments
+
+box-shadow()
+    -webkit-box-shadow: arguments
+    -moz-box-shadow: arguments
+    box-shadow: arguments
+
+body
+	overflow-x hidden
+.greyBackground
+	background-color GreyLight
+.btn
+	border-radius(0px 0px 0px 0px)
+.btn-wide
+	width 100%
+.form-control
+ 	border-radius(0px 0px 0px 0px)
+#login-form input {
+  margin-top: 20px;
+  height: 50px;
+  font-size: 1.6em;
+}
+#registration-form input {
+  margin-top: 20px;
+  height: 50px;
+  width: 100%;
+  font-size: 1.6em;
+}
+.dragcontainer
+	margin-top -70px
+.container
+	width 1000px
+container()
+	width 400px
+	position absolute
+	background-color GreyLight
+	box-shadow(0px 2px 2px Grey)
+	padding 15px
+	padding-top 5px
+
+.memContainer
+	container()
+	min-height 250px
+	top 80px
+	left 20px
+	z-index 1005
+
+.untiedMemContainer
+	container()
+	min-height 150px
+	max-height 95%
+	top 80px
+	right 20px
+	overflow:auto;
+	z-index 1005
+.untiedmem
+	padding-top 0px
+	padding-bottom 4px
+	padding-top 4px
+	font-size: 17px
+.helpContainer
+	container()
+	height 150px
+	top 20px
+	margin-left auto
+	display: block;
+	margin-right auto
+	width 200px
+	z-index 1005
+	position relative
+.iframeMindMap
+	width 100%
+	padding 0
+	margin 0
+	min-height:600px
+	overflow-x:hidden
+	border 1px solid GreyLight
+.savebutton-normal
+	background-color: white
+	border 0px
+.savebutton-saved
+	background-color: Green
+	border 0px
+.savebutton-unsaved
+	background-color: Red
+	border 0px
+
+.overviewContainer
+	background-color white
+	box-shadow( 0px 4px 10px rgba(0,0,0,0.2) )
+	border-radius(1px)
+	width:230px
+	height:230px
+	padding:20px
+	margin:10px
+	margin-left 0px
+	float: left
+
+.question
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	font-size 25px
+
+.wcontainer
+	background-color white
+	height auto
+	padding 20px
+	margin 10px
+	box-shadow( 0px 4px 10px rgba(0,0,0,0.2) )
+/*
+	---------------------------------- Practice page -------------------------
+ */
+
+.questionContainer
+	background-color white
+	height auto
+	min-height 300px
+	padding 20px
+	box-shadow( 0px 4px 10px rgba(0,0,0,0.2) )
+	border-radius(1px)
+	margin-top 40px
+
+.writeStatedAnswer
+	background-color GreyLight
+	min-height 70px
+	padding 20px
+	margin 20px
+.writeAnswer
+	background-color white
+	min-height 70px
+	padding 20px
+
+/*-----------------------------------------------------------------------------------*/
+/*  PARALAX
+/*-----------------------------------------------------------------------------------*/
+.parallax {
+    text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    min-height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    background-attachment: fixed;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    border-bottom 5px solid GreyDark
+}
+.parallax .inner {
+    padding: 0;
+}
+
+.parallax.mobile {
+    background-attachment: scroll !important;
+}
+
+.parallax h1 {
+    color: #ededed;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 60px;
+    display: block;
+    margin-bottom: 50px;
+}
+
+.header-text
+	color white
+	background-color rgba(0,0,0,0.4)
+	padding 20px
+.index-icon
+	font-size: 70px
+	color: Blue
