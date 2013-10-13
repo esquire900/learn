@@ -81,7 +81,7 @@ class SiteController extends Controller
 		$this->redirect(Yii::app()->homeUrl);
 	}
 
-	public function actionCreate(){
+	public function actionCreate($id){
 		$this->render('create');
 	}
 

@@ -18588,3 +18588,1967 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/learn/api/createnewmindmap?id=0
 ---
+2013/10/11 09:51:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mindmap/[object Object]".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('mindmap/[object...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/mindmap/%5Bobject%20Object%5D
+HTTP_REFERER=http://localhost/learn/create/0
+---
+2013/10/11 09:53:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getMindMap".' in W:\framework\web\CController.php:483
+Stack trace:
+#0 W:\framework\web\CController.php(270): CController->missingAction('getMindMap')
+#1 W:\framework\web\CWebApplication.php(282): CController->run('getMindMap')
+#2 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('API/getMindMap')
+#3 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 W:\learn\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/learn/API/getMindMap?id=5
+HTTP_REFERER=http://localhost/learn/mindmap/5
+---
+2013/10/11 09:54:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getMindMap".' in W:\framework\web\CController.php:483
+Stack trace:
+#0 W:\framework\web\CController.php(270): CController->missingAction('getMindMap')
+#1 W:\framework\web\CWebApplication.php(282): CController->run('getMindMap')
+#2 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('API/getMindMap')
+#3 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 W:\learn\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/learn/API/getMindMap?id=5
+HTTP_REFERER=http://localhost/learn/mindmap/5
+---
+2013/10/11 09:56:57 [error] [php] Undefined index: mindmapItems (W:\learn\protected\controllers\APIController.php:33)
+Stack trace:
+#0 W:\framework\web\CController.php(286): APIController->runAction()
+#1 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#2 W:\framework\web\CWebApplication.php(282): APIController->run()
+#3 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/saveMindMap
+in W:\learn\protected\controllers\APIController.php (33)
+in W:\learn\index.php (15)
+2013/10/11 09:58:57 [error] [php] Undefined variable: b (W:\learn\protected\controllers\APIController.php:119)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/getItems?id=5
+in W:\learn\protected\controllers\APIController.php (119)
+in W:\learn\index.php (15)
+2013/10/11 09:58:57 [error] [exception.CException] exception 'CException' with message 'Document and its behaviors do not have a method or closure named "generateSettings".' in W:\framework\base\CComponent.php:266
+Stack trace:
+#0 W:\framework\db\ar\CActiveRecord.php(227): CComponent->__call('generateSetting...', Array)
+#1 W:\learn\protected\controllers\APIController.php(124): CActiveRecord->__call('generateSetting...', Array)
+#2 W:\learn\protected\controllers\APIController.php(124): Document->generateSettings('5')
+#3 [internal function]: APIController->actionGetSettings('5')
+#4 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(APIController), Array)
+#5 W:\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(APIController), Object(ReflectionMethod), Array)
+#6 W:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 W:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 W:\framework\web\CWebApplication.php(282): CController->run('getSettings')
+#10 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('API/getSettings')
+#11 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 W:\learn\index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/learn/API/getSettings?id=5
+HTTP_REFERER=http://localhost/learn/mindmap/5
+---
+2013/10/11 09:59:13 [error] [php] Undefined variable: b (W:\learn\protected\controllers\APIController.php:119)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/getItems?id=5
+in W:\learn\protected\controllers\APIController.php (119)
+in W:\learn\index.php (15)
+2013/10/11 09:59:51 [error] [exception.CException] exception 'CException' with message 'Document and its behaviors do not have a method or closure named "generateSettings".' in W:\framework\base\CComponent.php:266
+Stack trace:
+#0 W:\framework\db\ar\CActiveRecord.php(227): CComponent->__call('generateSetting...', Array)
+#1 W:\learn\protected\controllers\APIController.php(124): CActiveRecord->__call('generateSetting...', Array)
+#2 W:\learn\protected\controllers\APIController.php(124): Document->generateSettings('5')
+#3 [internal function]: APIController->actionGetSettings('5')
+#4 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(APIController), Array)
+#5 W:\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(APIController), Object(ReflectionMethod), Array)
+#6 W:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 W:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 W:\framework\web\CWebApplication.php(282): CController->run('getsettings')
+#10 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('API/getsettings')
+#11 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 W:\learn\index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/learn/API/getsettings?id=5
+---
+2013/10/11 10:03:27 [error] [exception.CException] exception 'CException' with message 'Document and its behaviors do not have a method or closure named "getDocName".' in W:\framework\base\CComponent.php:266
+Stack trace:
+#0 W:\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getDocName', Array)
+#1 W:\learn\protected\views\category\index.php(30): CActiveRecord->__call('getDocName', Array)
+#2 W:\learn\protected\views\category\index.php(30): Document->getDocName()
+#3 W:\framework\web\CBaseController.php(126): require('W:\learn\protec...')
+#4 W:\framework\web\CBaseController.php(95): CBaseController->renderInternal('W:\learn\protec...', Array, true)
+#5 W:\framework\web\CController.php(869): CBaseController->renderFile('W:\learn\protec...', Array, true)
+#6 W:\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#7 W:\learn\protected\controllers\CategoryController.php(21): CController->render('index', Array)
+#8 [internal function]: CategoryController->actionIndex(0)
+#9 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#10 W:\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#11 W:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 W:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 W:\framework\web\CWebApplication.php(282): CController->run('index')
+#15 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('category/index')
+#16 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 W:\learn\index.php(15): CApplication->run()
+#18 {main}
+REQUEST_URI=/learn/overview
+HTTP_REFERER=http://localhost/learn/mindmap/5
+---
+2013/10/11 10:04:12 [error] [exception.CDbException] exception 'CDbException' with message 'Table "practice" does not have a column named "mem_id".' in W:\framework\db\schema\CDbCommandBuilder.php:694
+Stack trace:
+#0 W:\framework\db\ar\CActiveRecord.php(1518): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 W:\learn\protected\models\Question.php(50): CActiveRecord->findByAttributes(Array)
+#2 W:\learn\protected\models\Question.php(28): Question->getElements()
+#3 W:\learn\protected\controllers\APIController.php(51): Question->setPracticeTimes('6')
+#4 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#5 W:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 W:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 W:\framework\web\CWebApplication.php(282): CController->run('saveMindMap')
+#9 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('API/saveMindMap')
+#10 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 W:\learn\index.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/learn/API/saveMindMap
+HTTP_REFERER=http://localhost/learn/mindmap/6
+---
+2013/10/11 10:05:29 [error] [exception.CException] exception 'CException' with message 'Property "Item.practice" is not defined.' in W:\framework\base\CComponent.php:173
+Stack trace:
+#0 W:\framework\db\ar\CActiveRecord.php(161): CComponent->__set('practice', NULL)
+#1 W:\framework\base\CModel.php(607): CActiveRecord->__set('practice', NULL)
+#2 W:\learn\protected\models\Question.php(51): CModel->offsetSet('practice', NULL)
+#3 W:\learn\protected\models\Question.php(28): Question->getElements()
+#4 W:\learn\protected\controllers\APIController.php(51): Question->setPracticeTimes('6')
+#5 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#6 W:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 W:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 W:\framework\web\CWebApplication.php(282): CController->run('saveMindMap')
+#10 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('API/saveMindMap')
+#11 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 W:\learn\index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/learn/API/saveMindMap
+HTTP_REFERER=http://localhost/learn/mindmap/6
+---
+2013/10/11 10:07:08 [error] [php] Undefined index: parent_id (W:\learn\protected\models\Question.php:62)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/saveMindMap
+in W:\learn\protected\models\Question.php (62)
+in W:\learn\protected\models\Question.php (28)
+in W:\learn\protected\controllers\APIController.php (51)
+2013/10/11 10:07:36 [error] [php] Undefined index: answer (W:\learn\protected\models\Question.php:69)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/saveMindMap
+in W:\learn\protected\models\Question.php (69)
+in W:\learn\protected\models\Question.php (28)
+in W:\learn\protected\controllers\APIController.php (51)
+2013/10/13 10:15:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "deleteMindMap".' in W:\framework\web\CController.php:483
+Stack trace:
+#0 W:\framework\web\CController.php(270): CController->missingAction('deleteMindMap')
+#1 W:\framework\web\CWebApplication.php(282): CController->run('deleteMindMap')
+#2 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('API/deleteMindM...')
+#3 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 W:\learn\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/learn/API/deleteMindMap?id=6
+HTTP_REFERER=http://localhost/learn/overview
+---
+2013/10/13 10:15:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "deleteMindMap".' in W:\framework\web\CController.php:483
+Stack trace:
+#0 W:\framework\web\CController.php(270): CController->missingAction('deleteMindMap')
+#1 W:\framework\web\CWebApplication.php(282): CController->run('deleteMindMap')
+#2 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('API/deleteMindM...')
+#3 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 W:\learn\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/learn/API/deleteMindMap/6
+---
+2013/10/13 10:16:15 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in W:\framework\web\CController.php:336
+Stack trace:
+#0 W:\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 W:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 W:\framework\web\CWebApplication.php(282): CController->run('deleteDocument')
+#4 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('API/deleteDocum...')
+#5 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 W:\learn\index.php(15): CApplication->run()
+#7 {main}
+REQUEST_URI=/learn/API/deleteDocument/6
+HTTP_REFERER=http://localhost/learn/overview
+---
+2013/10/13 10:21:15 [error] [php] Undefined index: answer (W:\learn\protected\models\Question.php:69)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/saveMindMap
+in W:\learn\protected\models\Question.php (69)
+in W:\learn\protected\models\Question.php (28)
+in W:\learn\protected\controllers\APIController.php (51)
+2013/10/13 10:21:49 [error] [php] Undefined index: answer (W:\learn\protected\models\Question.php:69)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/saveMindMap
+in W:\learn\protected\models\Question.php (69)
+in W:\learn\protected\models\Question.php (28)
+in W:\learn\protected\controllers\APIController.php (51)
+2013/10/13 10:23:47 [error] [php] Undefined index: answer (W:\learn\protected\models\Question.php:69)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/saveMindMap
+in W:\learn\protected\models\Question.php (69)
+in W:\learn\protected\models\Question.php (28)
+in W:\learn\protected\controllers\APIController.php (51)
+2013/10/13 10:29:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mindmap/js/applicationconroller.js".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('mindmap/js/appl...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/mindmap/js/applicationconroller.js
+---
+2013/10/13 10:30:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mindmap/css/app.css".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('mindmap/css/app...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/mindmap/css/app.css
+HTTP_REFERER=http://localhost/learn/mindmap/7
+---
+2013/10/13 10:30:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mindmap/css/minicolors/jquery.miniColors.css".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('mindmap/css/min...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/mindmap/css/minicolors/jquery.miniColors.css
+HTTP_REFERER=http://localhost/learn/mindmap/7
+---
+2013/10/13 10:32:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets_web/mindmap/ApplicationController.js".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('assets_web/mind...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/assets_web/mindmap/ApplicationController.js
+---
+2013/10/13 10:45:13 [error] [php] Undefined index: answer (W:\learn\protected\models\Question.php:69)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/saveMindMap
+in W:\learn\protected\models\Question.php (69)
+in W:\learn\protected\models\Question.php (28)
+in W:\learn\protected\controllers\APIController.php (51)
+2013/10/13 10:50:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "mindmap/localhost/learn/API/getSettings".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('mindmap/localho...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/mindmap/localhost/learn/API/getSettings?id=7
+HTTP_REFERER=http://localhost/learn/mindmap/7
+---
+2013/10/13 10:53:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in W:\framework\web\CController.php:483
+Stack trace:
+#0 W:\framework\web\CController.php(270): CController->missingAction('create')
+#1 W:\framework\web\CWebApplication.php(282): CController->run('create')
+#2 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('site/create')
+#3 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 W:\learn\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/learn/create/0
+HTTP_REFERER=http://localhost/learn/overview
+---
+2013/10/13 11:08:12 [error] [php] Undefined index: answer (W:\learn\protected\models\Question.php:69)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/saveMindMap
+in W:\learn\protected\models\Question.php (69)
+in W:\learn\protected\models\Question.php (28)
+in W:\learn\protected\controllers\APIController.php (51)
+2013/10/13 11:09:07 [error] [exception.CException] exception 'CException' with message 'Property "Item.0" is not defined.' in W:\framework\base\CComponent.php:130
+Stack trace:
+#0 W:\framework\db\ar\CActiveRecord.php(145): CComponent->__get('0')
+#1 W:\framework\base\CModel.php(596): CActiveRecord->__get('0')
+#2 W:\learn\protected\models\Question.php(69): CModel->offsetGet(0)
+#3 W:\learn\protected\models\Question.php(28): Question->getElements()
+#4 W:\learn\protected\controllers\APIController.php(51): Question->setPracticeTimes('10')
+#5 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#6 W:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 W:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 W:\framework\web\CWebApplication.php(282): CController->run('saveMindMap')
+#10 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('API/saveMindMap')
+#11 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 W:\learn\index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/learn/API/saveMindMap
+HTTP_REFERER=http://localhost/learn/mindmap/10
+---
+2013/10/13 11:10:43 [error] [php] Undefined index: answer (W:\learn\protected\models\Question.php:79)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/saveMindMap
+in W:\learn\protected\models\Question.php (79)
+in W:\learn\protected\models\Question.php (28)
+in W:\learn\protected\controllers\APIController.php (51)
+2013/10/13 11:11:49 [error] [exception.CDbException] exception 'CDbException' with message 'Table "practice" does not have a column named "mem_id".' in W:\framework\db\schema\CDbCommandBuilder.php:694
+Stack trace:
+#0 W:\framework\db\ar\CActiveRecord.php(1518): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 W:\learn\protected\models\Question.php(31): CActiveRecord->findByAttributes(Array)
+#2 W:\learn\protected\controllers\APIController.php(51): Question->setPracticeTimes('10')
+#3 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#4 W:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 W:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 W:\framework\web\CWebApplication.php(282): CController->run('saveMindMap')
+#8 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('API/saveMindMap')
+#9 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 W:\learn\index.php(15): CApplication->run()
+#11 {main}
+REQUEST_URI=/learn/API/saveMindMap
+HTTP_REFERER=http://localhost/learn/mindmap/10
+---
+2013/10/13 11:12:09 [error] [php] include(Mem.php): failed to open stream: No such file or directory (W:\framework\YiiBase.php:427)
+Stack trace:
+#0 W:\learn\protected\models\Practice.php(69): spl_autoload_call()
+#1 W:\learn\protected\models\Question.php(35): Practice->setNew()
+#2 W:\learn\protected\controllers\APIController.php(51): Question->setPracticeTimes()
+#3 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#4 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 W:\framework\web\CController.php(286): APIController->runAction()
+#6 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#7 W:\framework\web\CWebApplication.php(282): APIController->run()
+#8 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/saveMindMap
+in W:\learn\protected\models\Practice.php (69)
+in W:\learn\protected\models\Question.php (35)
+in W:\learn\protected\controllers\APIController.php (51)
+2013/10/13 11:14:35 [error] [exception.CException] exception 'CException' with message 'Item and its behaviors do not have a method or closure named "findDocumentId".' in W:\framework\base\CComponent.php:266
+Stack trace:
+#0 W:\framework\db\ar\CActiveRecord.php(227): CComponent->__call('findDocumentId', Array)
+#1 W:\learn\protected\models\Practice.php(70): CActiveRecord->__call('findDocumentId', Array)
+#2 W:\learn\protected\models\Practice.php(70): Item->findDocumentId(0)
+#3 W:\learn\protected\models\Question.php(35): Practice->setNew(0)
+#4 W:\learn\protected\controllers\APIController.php(51): Question->setPracticeTimes('10')
+#5 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#6 W:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 W:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 W:\framework\web\CWebApplication.php(282): CController->run('saveMindMap')
+#10 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('API/saveMindMap')
+#11 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 W:\learn\index.php(15): CApplication->run()
+#13 {main}
+REQUEST_URI=/learn/API/saveMindMap
+HTTP_REFERER=http://localhost/learn/mindmap/10
+---
+2013/10/13 11:15:04 [error] [php] Trying to get property of non-object (W:\learn\protected\models\Practice.php:71)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/saveMindMap
+in W:\learn\protected\models\Practice.php (71)
+in W:\learn\protected\models\Question.php (35)
+in W:\learn\protected\controllers\APIController.php (51)
+2013/10/13 11:16:02 [error] [php] Trying to get property of non-object (W:\learn\protected\models\Practice.php:70)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/saveMindMap
+in W:\learn\protected\models\Practice.php (70)
+in W:\learn\protected\models\Question.php (35)
+in W:\learn\protected\controllers\APIController.php (51)
+2013/10/13 12:00:54 [error] [php] Trying to get property of non-object (W:\learn\protected\models\MindmapNode.php:158)
+Stack trace:
+#0 W:\learn\protected\models\Document.php(131): MindmapNode->getNodes()
+#1 W:\learn\protected\controllers\APIController.php(110): Document->getMindmap()
+#2 unknown(0): APIController->actionGetMindmap()
+#3 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#4 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 W:\framework\web\CController.php(286): APIController->runAction()
+#7 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#8 W:\framework\web\CWebApplication.php(282): APIController->run()
+#9 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/getMindMap?id=10
+in W:\learn\protected\models\MindmapNode.php (158)
+in W:\learn\protected\models\MindmapNode.php (173)
+in W:\learn\protected\models\MindmapNode.php (146)
+2013/10/13 12:00:54 [error] [php] Trying to get property of non-object (W:\learn\protected\models\MindmapNode.php:158)
+Stack trace:
+#0 W:\learn\protected\models\Document.php(131): MindmapNode->getNodes()
+#1 W:\learn\protected\controllers\APIController.php(110): Document->getMindmap()
+#2 unknown(0): APIController->actionGetMindmap()
+#3 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#4 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 W:\framework\web\CController.php(286): APIController->runAction()
+#7 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#8 W:\framework\web\CWebApplication.php(282): APIController->run()
+#9 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/getMindMap?id=10
+in W:\learn\protected\models\MindmapNode.php (158)
+in W:\learn\protected\models\MindmapNode.php (173)
+in W:\learn\protected\models\MindmapNode.php (146)
+2013/10/13 12:01:01 [error] [php] Trying to get property of non-object (W:\learn\protected\models\MindmapNode.php:158)
+Stack trace:
+#0 W:\learn\protected\models\Document.php(131): MindmapNode->getNodes()
+#1 W:\learn\protected\controllers\APIController.php(110): Document->getMindmap()
+#2 unknown(0): APIController->actionGetMindmap()
+#3 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#4 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 W:\framework\web\CController.php(286): APIController->runAction()
+#7 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#8 W:\framework\web\CWebApplication.php(282): APIController->run()
+#9 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/getMindMap?id=10
+in W:\learn\protected\models\MindmapNode.php (158)
+in W:\learn\protected\models\MindmapNode.php (173)
+in W:\learn\protected\models\MindmapNode.php (146)
+2013/10/13 12:13:39 [error] [php] Undefined index: term (W:\learn\protected\models\Question.php:158)
+Stack trace:
+#0 W:\learn\protected\controllers\APIController.php(166): Question->generate()
+#1 W:\framework\web\actions\CInlineAction.php(49): APIController->actionTest()
+#2 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 W:\framework\web\CController.php(286): APIController->runAction()
+#4 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#5 W:\framework\web\CWebApplication.php(282): APIController->run()
+#6 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/api/test
+in W:\learn\protected\models\Question.php (158)
+in W:\learn\protected\models\Question.php (132)
+in W:\learn\protected\models\Question.php (21)
+2013/10/13 12:14:44 [error] [php] Undefined property: Question::$questionsElements (W:\learn\protected\models\Question.php:20)
+Stack trace:
+#0 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 W:\framework\web\CController.php(286): APIController->runAction()
+#2 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#3 W:\framework\web\CWebApplication.php(282): APIController->run()
+#4 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/api/test
+in W:\learn\protected\models\Question.php (20)
+in W:\learn\protected\controllers\APIController.php (166)
+in W:\learn\index.php (15)
+2013/10/13 12:15:50 [error] [php] Trying to get property of non-object (W:\learn\protected\models\Practice.php:70)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/saveMindMap
+in W:\learn\protected\models\Practice.php (70)
+in W:\learn\protected\models\Question.php (34)
+in W:\learn\protected\controllers\APIController.php (51)
+2013/10/13 12:17:45 [error] [php] Trying to get property of non-object (W:\learn\protected\models\Practice.php:122)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/saveMindMap
+in W:\learn\protected\models\Practice.php (122)
+in W:\learn\protected\models\Question.php (36)
+in W:\learn\protected\controllers\APIController.php (51)
+2013/10/13 12:18:07 [error] [php] Undefined variable: items (W:\learn\protected\models\Question.php:89)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionTest()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/api/test
+in W:\learn\protected\models\Question.php (89)
+in W:\learn\protected\models\Question.php (18)
+in W:\learn\protected\controllers\APIController.php (166)
+2013/10/13 12:18:24 [error] [php] Undefined index: term (W:\learn\protected\models\Question.php:144)
+Stack trace:
+#0 W:\learn\protected\controllers\APIController.php(166): Question->generate()
+#1 W:\framework\web\actions\CInlineAction.php(49): APIController->actionTest()
+#2 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 W:\framework\web\CController.php(286): APIController->runAction()
+#4 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#5 W:\framework\web\CWebApplication.php(282): APIController->run()
+#6 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/api/test
+in W:\learn\protected\models\Question.php (144)
+in W:\learn\protected\models\Question.php (127)
+in W:\learn\protected\models\Question.php (21)
+2013/10/13 12:26:39 [error] [php] Trying to get property of non-object (W:\learn\protected\models\Document.php:151)
+Stack trace:
+#0 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 W:\framework\web\CController.php(286): APIController->runAction()
+#4 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#5 W:\framework\web\CWebApplication.php(282): APIController->run()
+#6 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/getSettings?id=7
+in W:\learn\protected\models\Document.php (151)
+in W:\learn\protected\controllers\APIController.php (124)
+in W:\learn\index.php (15)
+2013/10/13 12:36:13 [error] [php] Trying to get property of non-object (W:\learn\protected\models\Practice.php:122)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/saveMindMap
+in W:\learn\protected\models\Practice.php (122)
+in W:\learn\protected\models\Question.php (36)
+in W:\learn\protected\controllers\APIController.php (51)
+2013/10/13 12:36:43 [error] [php] Trying to get property of non-object (W:\learn\protected\models\Practice.php:122)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/saveMindMap
+in W:\learn\protected\models\Practice.php (122)
+in W:\learn\protected\models\Question.php (36)
+in W:\learn\protected\controllers\APIController.php (51)
+2013/10/13 12:57:19 [error] [php] Trying to get property of non-object (W:\learn\protected\models\Practice.php:122)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/saveMindMap
+in W:\learn\protected\models\Practice.php (122)
+in W:\learn\protected\models\Question.php (36)
+in W:\learn\protected\controllers\APIController.php (51)
+2013/10/13 13:01:46 [error] [php] Trying to get property of non-object (W:\learn\protected\models\Practice.php:122)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionSaveMindMap()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/saveMindMap
+in W:\learn\protected\models\Practice.php (122)
+in W:\learn\protected\models\Question.php (36)
+in W:\learn\protected\controllers\APIController.php (51)
+2013/10/13 13:06:27 [error] [php] Missing argument 1 for Question::setPracticeTimes(), called in W:\learn\protected\controllers\APIController.php on line 172 and defined (W:\learn\protected\models\Question.php:25)
+Stack trace:
+#0 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 W:\framework\web\CController.php(286): APIController->runAction()
+#2 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#3 W:\framework\web\CWebApplication.php(282): APIController->run()
+#4 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/api/test
+in W:\learn\protected\models\Question.php (25)
+in W:\learn\protected\controllers\APIController.php (172)
+in W:\learn\index.php (15)
+2013/10/13 13:06:41 [error] [php] Trying to get property of non-object (W:\learn\protected\models\Practice.php:121)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionTest()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/api/test
+in W:\learn\protected\models\Practice.php (121)
+in W:\learn\protected\models\Question.php (36)
+in W:\learn\protected\controllers\APIController.php (172)
+2013/10/13 13:14:17 [error] [php] Trying to get property of non-object (W:\learn\protected\models\MindmapNode.php:158)
+Stack trace:
+#0 W:\learn\protected\controllers\APIController.php(110): Document->getMindmap()
+#1 unknown(0): APIController->actionGetMindmap()
+#2 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 W:\framework\web\CController.php(286): APIController->runAction()
+#6 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#7 W:\framework\web\CWebApplication.php(282): APIController->run()
+#8 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/getMindMap?id=16
+in W:\learn\protected\models\MindmapNode.php (158)
+in W:\learn\protected\models\MindmapNode.php (146)
+in W:\learn\protected\models\Document.php (131)
+2013/10/13 13:14:45 [error] [php] Trying to get property of non-object (W:\learn\protected\models\MindmapNode.php:158)
+Stack trace:
+#0 W:\learn\protected\controllers\APIController.php(110): Document->getMindmap()
+#1 unknown(0): APIController->actionGetMindmap()
+#2 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 W:\framework\web\CController.php(286): APIController->runAction()
+#6 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#7 W:\framework\web\CWebApplication.php(282): APIController->run()
+#8 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/getMindMap?id=16
+in W:\learn\protected\models\MindmapNode.php (158)
+in W:\learn\protected\models\MindmapNode.php (146)
+in W:\learn\protected\models\Document.php (131)
+2013/10/13 13:16:57 [error] [php] Trying to get property of non-object (W:\learn\protected\models\MindmapNode.php:158)
+Stack trace:
+#0 W:\learn\protected\controllers\APIController.php(110): Document->getMindmap()
+#1 unknown(0): APIController->actionGetMindmap()
+#2 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 W:\framework\web\CController.php(286): APIController->runAction()
+#6 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#7 W:\framework\web\CWebApplication.php(282): APIController->run()
+#8 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/getMindMap?id=17
+in W:\learn\protected\models\MindmapNode.php (158)
+in W:\learn\protected\models\MindmapNode.php (146)
+in W:\learn\protected\models\Document.php (131)
+2013/10/13 13:19:32 [error] [php] Trying to get property of non-object (W:\learn\protected\models\MindmapNode.php:158)
+Stack trace:
+#0 W:\learn\protected\controllers\APIController.php(110): Document->getMindmap()
+#1 unknown(0): APIController->actionGetMindmap()
+#2 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 W:\framework\web\CController.php(286): APIController->runAction()
+#6 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#7 W:\framework\web\CWebApplication.php(282): APIController->run()
+#8 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/API/getMindMap?id=17
+in W:\learn\protected\models\MindmapNode.php (158)
+in W:\learn\protected\models\MindmapNode.php (146)
+in W:\learn\protected\models\Document.php (131)
+2013/10/13 13:19:46 [error] [php] Trying to get property of non-object (W:\learn\protected\models\MindmapNode.php:158)
+Stack trace:
+#0 W:\learn\protected\controllers\APIController.php(110): Document->getMindmap()
+#1 unknown(0): APIController->actionGetMindmap()
+#2 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 W:\framework\web\CController.php(286): APIController->runAction()
+#6 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#7 W:\framework\web\CWebApplication.php(282): APIController->run()
+#8 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/api/getmindmap?id=17
+in W:\learn\protected\models\MindmapNode.php (158)
+in W:\learn\protected\models\MindmapNode.php (146)
+in W:\learn\protected\models\Document.php (131)
+2013/10/13 13:21:59 [error] [php] Trying to get property of non-object (W:\learn\protected\models\MindmapNode.php:158)
+Stack trace:
+#0 W:\learn\protected\controllers\APIController.php(110): Document->getMindmap()
+#1 unknown(0): APIController->actionGetMindmap()
+#2 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 W:\framework\web\CController.php(286): APIController->runAction()
+#6 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#7 W:\framework\web\CWebApplication.php(282): APIController->run()
+#8 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/api/getmindmap?id=17
+in W:\learn\protected\models\MindmapNode.php (158)
+in W:\learn\protected\models\MindmapNode.php (146)
+in W:\learn\protected\models\Document.php (131)
+2013/10/13 13:40:53 [error] [php] Undefined variable: getId (W:\learn\protected\views\category\newmodal.php:12)
+Stack trace:
+#0 W:\framework\web\CController.php(869): CategoryController->renderFile()
+#1 W:\learn\protected\views\category\index.php(12): CategoryController->renderPartial()
+#2 W:\framework\web\CBaseController.php(126): require()
+#3 W:\framework\web\CBaseController.php(95): CategoryController->renderInternal()
+#4 W:\framework\web\CController.php(869): CategoryController->renderFile()
+#5 W:\framework\web\CController.php(782): CategoryController->renderPartial()
+#6 W:\learn\protected\controllers\CategoryController.php(38): CategoryController->render()
+#7 unknown(0): CategoryController->actionIndex()
+#8 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 W:\framework\web\filters\CFilterChain.php(133): CategoryController->runAction()
+#12 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 W:\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 W:\framework\web\filters\CInlineFilter.php(58): CategoryController->filterAccessControl()
+#15 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 W:\framework\web\CController.php(291): CFilterChain->run()
+#17 W:\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#18 W:\framework\web\CWebApplication.php(282): CategoryController->run()
+#19 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/overview
+in W:\learn\protected\views\category\newmodal.php (12)
+in W:\learn\protected\views\category\index.php (12)
+in W:\learn\protected\controllers\CategoryController.php (38)
+2013/10/13 15:35:49 [error] [php] array_merge(): Argument #1 is not an array (W:\learn\protected\models\Category.php:173)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(49): APIController->actionTest()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\CController.php(286): APIController->runAction()
+#3 W:\framework\web\CController.php(265): APIController->runActionWithFilters()
+#4 W:\framework\web\CWebApplication.php(282): APIController->run()
+#5 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/api/test
+in W:\learn\protected\models\Category.php (173)
+in W:\learn\protected\controllers\APIController.php (172)
+in W:\learn\index.php (15)
+2013/10/13 15:37:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "overview/id/3".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('overview/id/3')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/overview/id/3
+---
+2013/10/13 15:41:17 [error] [php] Undefined variable: m (W:\learn\protected\views\category\index.php:15)
+Stack trace:
+#0 W:\framework\web\CController.php(869): CategoryController->renderFile()
+#1 W:\framework\web\CController.php(782): CategoryController->renderPartial()
+#2 W:\learn\protected\controllers\CategoryController.php(38): CategoryController->render()
+#3 unknown(0): CategoryController->actionIndex()
+#4 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 W:\framework\web\filters\CFilterChain.php(133): CategoryController->runAction()
+#8 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 W:\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 W:\framework\web\filters\CInlineFilter.php(58): CategoryController->filterAccessControl()
+#11 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 W:\framework\web\CController.php(291): CFilterChain->run()
+#13 W:\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#14 W:\framework\web\CWebApplication.php(282): CategoryController->run()
+#15 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/overview/3
+in W:\learn\protected\views\category\index.php (15)
+in W:\learn\protected\controllers\CategoryController.php (38)
+in W:\learn\index.php (15)
+2013/10/13 15:42:32 [error] [php] Undefined variable: m (W:\learn\protected\views\category\index.php:18)
+Stack trace:
+#0 W:\framework\web\CController.php(869): CategoryController->renderFile()
+#1 W:\framework\web\CController.php(782): CategoryController->renderPartial()
+#2 W:\learn\protected\controllers\CategoryController.php(38): CategoryController->render()
+#3 unknown(0): CategoryController->actionIndex()
+#4 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 W:\framework\web\filters\CFilterChain.php(133): CategoryController->runAction()
+#8 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 W:\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 W:\framework\web\filters\CInlineFilter.php(58): CategoryController->filterAccessControl()
+#11 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 W:\framework\web\CController.php(291): CFilterChain->run()
+#13 W:\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#14 W:\framework\web\CWebApplication.php(282): CategoryController->run()
+#15 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/overview/3
+in W:\learn\protected\views\category\index.php (18)
+in W:\learn\protected\controllers\CategoryController.php (38)
+in W:\learn\index.php (15)
+2013/10/13 15:42:39 [error] [exception.CException] exception 'CException' with message 'Property "Category.breadcrumbs" is not defined.' in W:\framework\base\CComponent.php:130
+Stack trace:
+#0 W:\framework\db\ar\CActiveRecord.php(145): CComponent->__get('breadcrumbs')
+#1 W:\learn\protected\views\category\index.php(18): CActiveRecord->__get('breadcrumbs')
+#2 W:\framework\web\CBaseController.php(126): require('W:\learn\protec...')
+#3 W:\framework\web\CBaseController.php(95): CBaseController->renderInternal('W:\learn\protec...', Array, true)
+#4 W:\framework\web\CController.php(869): CBaseController->renderFile('W:\learn\protec...', Array, true)
+#5 W:\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 W:\learn\protected\controllers\CategoryController.php(38): CController->render('index', Array)
+#7 [internal function]: CategoryController->actionIndex('3')
+#8 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#9 W:\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#10 W:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 W:\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 W:\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 W:\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 W:\framework\web\CController.php(291): CFilterChain->run()
+#17 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 W:\framework\web\CWebApplication.php(282): CController->run('index')
+#19 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('category/index')
+#20 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 W:\learn\index.php(15): CApplication->run()
+#22 {main}
+REQUEST_URI=/learn/overview/3
+---
+2013/10/13 15:42:54 [error] [php] Undefined variable: m (W:\learn\protected\views\category\index.php:22)
+Stack trace:
+#0 W:\framework\web\CController.php(869): CategoryController->renderFile()
+#1 W:\framework\web\CController.php(782): CategoryController->renderPartial()
+#2 W:\learn\protected\controllers\CategoryController.php(38): CategoryController->render()
+#3 unknown(0): CategoryController->actionIndex()
+#4 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 W:\framework\web\filters\CFilterChain.php(133): CategoryController->runAction()
+#8 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 W:\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 W:\framework\web\filters\CInlineFilter.php(58): CategoryController->filterAccessControl()
+#11 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 W:\framework\web\CController.php(291): CFilterChain->run()
+#13 W:\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#14 W:\framework\web\CWebApplication.php(282): CategoryController->run()
+#15 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/overview/3
+in W:\learn\protected\views\category\index.php (22)
+in W:\learn\protected\controllers\CategoryController.php (38)
+in W:\learn\index.php (15)
+2013/10/13 15:48:01 [error] [php] Undefined variable: x (W:\learn\protected\views\category\index.php:21)
+Stack trace:
+#0 W:\framework\web\CController.php(869): CategoryController->renderFile()
+#1 W:\framework\web\CController.php(782): CategoryController->renderPartial()
+#2 W:\learn\protected\controllers\CategoryController.php(38): CategoryController->render()
+#3 unknown(0): CategoryController->actionIndex()
+#4 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 W:\framework\web\filters\CFilterChain.php(133): CategoryController->runAction()
+#8 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 W:\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 W:\framework\web\filters\CInlineFilter.php(58): CategoryController->filterAccessControl()
+#11 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 W:\framework\web\CController.php(291): CFilterChain->run()
+#13 W:\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#14 W:\framework\web\CWebApplication.php(282): CategoryController->run()
+#15 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/overview?id=3
+in W:\learn\protected\views\category\index.php (21)
+in W:\learn\protected\controllers\CategoryController.php (38)
+in W:\learn\index.php (15)
+2013/10/13 17:29:02 [error] [exception.CException] exception 'CException' with message 'Property "Category.delete" is not defined.' in W:\framework\base\CComponent.php:130
+Stack trace:
+#0 W:\framework\db\ar\CActiveRecord.php(145): CComponent->__get('delete')
+#1 W:\learn\protected\controllers\CategoryController.php(46): CActiveRecord->__get('delete')
+#2 [internal function]: CategoryController->actionDelete('3')
+#3 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#4 W:\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#5 W:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 W:\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 W:\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 W:\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 W:\framework\web\CController.php(291): CFilterChain->run()
+#12 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 W:\framework\web\CWebApplication.php(282): CController->run('delete')
+#14 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('category/delete...')
+#15 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 W:\learn\index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/learn/category/delete/id/3
+HTTP_REFERER=http://localhost/learn/overview
+---
+2013/10/13 17:29:07 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in W:\framework\web\CController.php:336
+Stack trace:
+#0 W:\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 W:\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 W:\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 W:\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 W:\framework\web\CController.php(291): CFilterChain->run()
+#7 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 W:\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('category/delete...')
+#10 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 W:\learn\index.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/learn/category/delete/3
+---
+2013/10/13 17:29:22 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in W:\framework\web\CController.php:336
+Stack trace:
+#0 W:\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 W:\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 W:\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 W:\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 W:\framework\web\CController.php(291): CFilterChain->run()
+#7 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 W:\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('category/delete...')
+#10 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 W:\learn\index.php(15): CApplication->run()
+#12 {main}
+REQUEST_URI=/learn/category/delete/3
+---
+2013/10/13 17:29:31 [error] [php] Trying to get property of non-object (W:\learn\protected\controllers\CategoryController.php:43)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\filters\CFilterChain.php(133): CategoryController->runAction()
+#3 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 W:\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 W:\framework\web\filters\CInlineFilter.php(58): CategoryController->filterAccessControl()
+#6 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 W:\framework\web\CController.php(291): CFilterChain->run()
+#8 W:\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#9 W:\framework\web\CWebApplication.php(282): CategoryController->run()
+#10 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/category/delete?id=33
+in W:\learn\protected\controllers\CategoryController.php (43)
+in W:\learn\index.php (15)
+2013/10/13 17:29:34 [error] [exception.CException] exception 'CException' with message 'Property "Category.delete" is not defined.' in W:\framework\base\CComponent.php:130
+Stack trace:
+#0 W:\framework\db\ar\CActiveRecord.php(145): CComponent->__get('delete')
+#1 W:\learn\protected\controllers\CategoryController.php(46): CActiveRecord->__get('delete')
+#2 [internal function]: CategoryController->actionDelete('3')
+#3 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#4 W:\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#5 W:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 W:\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 W:\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 W:\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 W:\framework\web\CController.php(291): CFilterChain->run()
+#12 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 W:\framework\web\CWebApplication.php(282): CController->run('delete')
+#14 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('category/delete')
+#15 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 W:\learn\index.php(15): CApplication->run()
+#17 {main}
+REQUEST_URI=/learn/category/delete?id=3
+---
+2013/10/13 17:29:42 [error] [exception.CException] exception 'CException' with message 'Category and its behaviors do not have a method or closure named "deleteCategory".' in W:\framework\base\CComponent.php:266
+Stack trace:
+#0 W:\framework\db\ar\CActiveRecord.php(227): CComponent->__call('deleteCategory', Array)
+#1 W:\learn\protected\controllers\CategoryController.php(47): CActiveRecord->__call('deleteCategory', Array)
+#2 W:\learn\protected\controllers\CategoryController.php(47): Category->deleteCategory()
+#3 [internal function]: CategoryController->actionDelete('3')
+#4 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#5 W:\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#6 W:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 W:\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 W:\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 W:\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 W:\framework\web\CController.php(291): CFilterChain->run()
+#13 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 W:\framework\web\CWebApplication.php(282): CController->run('delete')
+#15 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('category/delete')
+#16 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 W:\learn\index.php(15): CApplication->run()
+#18 {main}
+REQUEST_URI=/learn/category/delete?id=3
+---
+2013/10/13 17:29:54 [error] [php] Trying to get property of non-object (W:\learn\protected\controllers\CategoryController.php:43)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\filters\CFilterChain.php(133): CategoryController->runAction()
+#3 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 W:\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 W:\framework\web\filters\CInlineFilter.php(58): CategoryController->filterAccessControl()
+#6 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 W:\framework\web\CController.php(291): CFilterChain->run()
+#8 W:\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#9 W:\framework\web\CWebApplication.php(282): CategoryController->run()
+#10 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/category/delete?id=3
+in W:\learn\protected\controllers\CategoryController.php (43)
+in W:\learn\index.php (15)
+2013/10/13 17:29:57 [error] [php] Trying to get property of non-object (W:\learn\protected\controllers\CategoryController.php:43)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\filters\CFilterChain.php(133): CategoryController->runAction()
+#3 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 W:\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 W:\framework\web\filters\CInlineFilter.php(58): CategoryController->filterAccessControl()
+#6 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 W:\framework\web\CController.php(291): CFilterChain->run()
+#8 W:\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#9 W:\framework\web\CWebApplication.php(282): CategoryController->run()
+#10 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/category/delete?id=3
+in W:\learn\protected\controllers\CategoryController.php (43)
+in W:\learn\index.php (15)
+2013/10/13 19:08:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets_web/js/mindmappapp.js".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('assets_web/js/m...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/assets_web/js/mindmappapp.js
+---
+2013/10/13 19:09:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets_web/js/mindmappApp.js".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('assets_web/js/m...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/assets_web/js/mindmappApp.js
+---
+2013/10/13 19:09:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets_web/js/mindmappApp.js".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('assets_web/js/m...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/assets_web/js/mindmappApp.js
+---
+2013/10/13 19:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets_web/js/mindmappApp.js".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('assets_web/js/m...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/assets_web/js/mindmappApp.js
+---
+2013/10/13 20:14:19 [error] [php] trim() expects parameter 1 to be string, array given (W:\framework\web\CUrlManager.php:297)
+Stack trace:
+#0 W:\learn\protected\views\category\index.php(45): CWebApplication->createUrl()
+#1 W:\framework\web\CBaseController.php(126): require()
+#2 W:\framework\web\CBaseController.php(95): CategoryController->renderInternal()
+#3 W:\framework\web\CController.php(869): CategoryController->renderFile()
+#4 W:\framework\web\CController.php(782): CategoryController->renderPartial()
+#5 W:\learn\protected\controllers\CategoryController.php(38): CategoryController->render()
+#6 unknown(0): CategoryController->actionIndex()
+#7 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#8 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#9 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 W:\framework\web\filters\CFilterChain.php(133): CategoryController->runAction()
+#11 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 W:\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#13 W:\framework\web\filters\CInlineFilter.php(58): CategoryController->filterAccessControl()
+#14 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 W:\framework\web\CController.php(291): CFilterChain->run()
+#16 W:\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#17 W:\framework\web\CWebApplication.php(282): CategoryController->run()
+#18 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/overview
+in W:\learn\protected\views\category\index.php (45)
+in W:\learn\protected\controllers\CategoryController.php (38)
+in W:\learn\index.php (15)
+2013/10/13 20:23:30 [error] [exception.CException] exception 'CException' with message 'Property "CategoryController.title" is not defined.' in W:\framework\base\CComponent.php:173
+Stack trace:
+#0 W:\learn\protected\views\category\index.php(2): CComponent->__set('title', 'overview')
+#1 W:\framework\web\CBaseController.php(126): require('W:\learn\protec...')
+#2 W:\framework\web\CBaseController.php(95): CBaseController->renderInternal('W:\learn\protec...', Array, true)
+#3 W:\framework\web\CController.php(869): CBaseController->renderFile('W:\learn\protec...', Array, true)
+#4 W:\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#5 W:\learn\protected\controllers\CategoryController.php(38): CController->render('index', Array)
+#6 [internal function]: CategoryController->actionIndex(0)
+#7 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#8 W:\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#9 W:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 W:\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 W:\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 W:\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 W:\framework\web\CController.php(291): CFilterChain->run()
+#16 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 W:\framework\web\CWebApplication.php(282): CController->run('index')
+#18 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('category/index')
+#19 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 W:\learn\index.php(15): CApplication->run()
+#21 {main}
+REQUEST_URI=/learn/overview
+---
+2013/10/13 20:26:57 [error] [exception.CException] exception 'CException' with message 'Item and its behaviors do not have a method or closure named "getitems".' in W:\framework\base\CComponent.php:266
+Stack trace:
+#0 W:\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getitems', Array)
+#1 W:\learn\protected\models\Document.php(183): CActiveRecord->__call('getitems', Array)
+#2 W:\learn\protected\models\Document.php(183): Item->getitems('21', false)
+#3 W:\learn\protected\views\category\index.php(76): Document->practiceCount()
+#4 W:\framework\web\CBaseController.php(126): require('W:\learn\protec...')
+#5 W:\framework\web\CBaseController.php(95): CBaseController->renderInternal('W:\learn\protec...', Array, true)
+#6 W:\framework\web\CController.php(869): CBaseController->renderFile('W:\learn\protec...', Array, true)
+#7 W:\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 W:\learn\protected\controllers\CategoryController.php(38): CController->render('index', Array)
+#9 [internal function]: CategoryController->actionIndex(0)
+#10 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(CategoryController), Array)
+#11 W:\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CategoryController), Object(ReflectionMethod), Array)
+#12 W:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 W:\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 W:\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 W:\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 W:\framework\web\CController.php(291): CFilterChain->run()
+#19 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 W:\framework\web\CWebApplication.php(282): CController->run('index')
+#21 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('category/index')
+#22 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 W:\learn\index.php(15): CApplication->run()
+#24 {main}
+REQUEST_URI=/learn/overview
+---
+2013/10/13 20:47:10 [error] [php] Undefined variable: news (W:\learn\protected\views\site\common\settings.php:15)
+Stack trace:
+#0 W:\framework\web\CController.php(869): SiteController->renderFile()
+#1 W:\learn\protected\views\site\mindmap\index.php(65): SiteController->renderPartial()
+#2 W:\framework\web\CBaseController.php(126): require()
+#3 W:\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 W:\framework\web\CController.php(869): SiteController->renderFile()
+#5 W:\framework\web\CController.php(782): SiteController->renderPartial()
+#6 W:\learn\protected\controllers\SiteController.php(89): SiteController->render()
+#7 unknown(0): SiteController->actionMindMap()
+#8 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 W:\framework\web\CController.php(286): SiteController->runAction()
+#12 W:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#13 W:\framework\web\CWebApplication.php(282): SiteController->run()
+#14 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/mindmap/22
+in W:\learn\protected\views\site\common\settings.php (15)
+in W:\learn\protected\views\site\mindmap\index.php (65)
+in W:\learn\protected\controllers\SiteController.php (89)
+2013/10/13 20:47:16 [error] [exception.CException] exception 'CException' with message 'CJuiDateTimePicker must specify "model" and "attribute" or "name" property values.' in W:\framework\zii\widgets\jui\CJuiInputWidget.php:59
+Stack trace:
+#0 W:\learn\protected\extensions\CJuiDateTimePicker\CJuiDateTimePicker.php(26): CJuiInputWidget->resolveNameID()
+#1 W:\framework\web\CBaseController.php(173): CJuiDateTimePicker->run()
+#2 W:\learn\protected\views\site\common\settings.php(22): CBaseController->widget('CJuiDateTimePic...', Array)
+#3 W:\framework\web\CBaseController.php(126): require('W:\learn\protec...')
+#4 W:\framework\web\CBaseController.php(95): CBaseController->renderInternal('W:\learn\protec...', NULL, true)
+#5 W:\framework\web\CController.php(869): CBaseController->renderFile('W:\learn\protec...', NULL, true)
+#6 W:\learn\protected\views\site\mindmap\index.php(65): CController->renderPartial('common/settings')
+#7 W:\framework\web\CBaseController.php(126): require('W:\learn\protec...')
+#8 W:\framework\web\CBaseController.php(95): CBaseController->renderInternal('W:\learn\protec...', NULL, true)
+#9 W:\framework\web\CController.php(869): CBaseController->renderFile('W:\learn\protec...', NULL, true)
+#10 W:\framework\web\CController.php(782): CController->renderPartial('mindmap/index', NULL, true)
+#11 W:\learn\protected\controllers\SiteController.php(89): CController->render('mindmap/index')
+#12 [internal function]: SiteController->actionMindMap('22')
+#13 W:\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#14 W:\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#15 W:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 W:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#17 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 W:\framework\web\CWebApplication.php(282): CController->run('mindmap')
+#19 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('site/mindmap')
+#20 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 W:\learn\index.php(15): CApplication->run()
+#22 {main}
+REQUEST_URI=/learn/mindmap/22
+---
+2013/10/13 21:16:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/getQuestions".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/ge...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/getQuestions?id=22
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:17:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/getQuestions".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/ge...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/getQuestions?id=22
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:17:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699070.31
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:17:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699070.302
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:19:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699152.856
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:19:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699152.874
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:19:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699161.866
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:19:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699161.873
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:19:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699197.771
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:19:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699197.778
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:20:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699216.36
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:20:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699216.352
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:20:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699234.641
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:20:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699234.632
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:20:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699246.165
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:20:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699246.173
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699254.889
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:20:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699254.896
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:21:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699267.201
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:21:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699267.208
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:21:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699272.078
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:21:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699272.071
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:21:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699305.548
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:21:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699305.556
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:21:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699316.398
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:21:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699316.39
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:22:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_answer&target=null&target_id=76&timestamp=1381699346.862
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:23:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699414.508
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:23:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699414.501
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:23:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_answer&target=null&target_id=76&timestamp=1381699415.659
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:26:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699582.212
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:26:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699582.22
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:26:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699603.085
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:26:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699603.092
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:27:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699643.338
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:27:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699643.33
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:28:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699708.69
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:28:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699708.681
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:28:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699724.395
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:28:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699724.385
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:29:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699778.747
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:29:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699778.755
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:30:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699800.761
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:30:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699800.753
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:30:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699848.919
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:30:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699848.926
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:31:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699890.774
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:31:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699890.782
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:31:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699896.228
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:31:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699896.221
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:33:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381699998.037
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:33:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381699998.045
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:33:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381700031.705
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:33:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381700031.697
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:34:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381700053.323
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:34:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381700053.315
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:34:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381700074.54
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:34:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381700074.532
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:34:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381700075.916
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:34:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381700075.922
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:34:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381700077.036
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:34:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381700077.042
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:35:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381700117.011
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:35:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381700117.002
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:35:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381700159.256
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:35:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381700159.264
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:36:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381700171.014
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:36:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381700171.021
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:36:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=document.practice_session_start&target=null&target_id=22&timestamp=1381700189.215
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 21:36:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "practice/API/log".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('practice/API/lo...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/practice/API/log?action=mem.show_question&target=null&target_id=76&timestamp=1381700189.208
+HTTP_REFERER=http://localhost/learn/practice/22
+---
+2013/10/13 22:06:25 [error] [php] Undefined variable: c (W:\learn\protected\controllers\CategoryController.php:42)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\filters\CFilterChain.php(133): CategoryController->runAction()
+#3 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 W:\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 W:\framework\web\filters\CInlineFilter.php(58): CategoryController->filterAccessControl()
+#6 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 W:\framework\web\CController.php(291): CFilterChain->run()
+#8 W:\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#9 W:\framework\web\CWebApplication.php(282): CategoryController->run()
+#10 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/overview?search=test
+in W:\learn\protected\controllers\CategoryController.php (42)
+in W:\learn\index.php (15)
+2013/10/13 22:06:34 [error] [php] Undefined variable: c (W:\learn\protected\controllers\CategoryController.php:42)
+Stack trace:
+#0 W:\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 W:\framework\web\filters\CFilterChain.php(133): CategoryController->runAction()
+#3 W:\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 W:\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 W:\framework\web\filters\CInlineFilter.php(58): CategoryController->filterAccessControl()
+#6 W:\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 W:\framework\web\CController.php(291): CFilterChain->run()
+#8 W:\framework\web\CController.php(265): CategoryController->runActionWithFilters()
+#9 W:\framework\web\CWebApplication.php(282): CategoryController->run()
+#10 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/overview?search=test
+in W:\learn\protected\controllers\CategoryController.php (42)
+in W:\learn\index.php (15)

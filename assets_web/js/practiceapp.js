@@ -35,13 +35,14 @@ PracticeCtrl = function($scope) {
     }
   });
   $scope.loadQuestions = function() {
-    var url;
-    $scope.id = ~~window.location.search.replace("?id=", '');
-    if (typeof $scope.id !== "number" || $scope.id === 0) {
+    var href, url;
+    href = window.location.href.split("/practice/");
+    $scope.id = href[1];
+    if ($scope.id === 0) {
       $scope.notify('No id is set in the url, you sure you came here the right way?', 'info');
       return 0;
     }
-    url = "API/getQuestions?id=" + $scope.id;
+    url = "../API/getQuestions?id=" + $scope.id;
     return $.getJSON(url, function(data) {
       if (data.success === false) {
         $scope.notify(data.message, 'danger');
@@ -100,6 +101,7 @@ PracticeCtrl = function($scope) {
       $scope.hideAll();
       $scope.show.buttonsQuestion = true;
       $scope.show.question = true;
+      $scope.show.thinkField = true;
     } else if (q.questionMethod === "write") {
       $scope.hideAll();
       $scope.show.question = true;
@@ -164,7 +166,8 @@ PracticeCtrl = function($scope) {
       buttonsEval: false,
       buttonsQuestion: false,
       writeField: false,
-      writeAnswer: false
+      writeAnswer: false,
+      thinkField: false
     };
   };
   $scope.hideAll();

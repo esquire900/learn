@@ -41,10 +41,10 @@ class Practice extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('time, user_id, mem_id', 'required'),
+			array('time, user_id, item_id', 'required'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, time, user_id, mem_id', 'safe', 'on'=>'search'),
+			array('id, time, user_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,7 +57,7 @@ class Practice extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'user' => array(self::BELONGS_TO, 'User', 'user_id'),
-			'mem' => array(self::BELONGS_TO, 'Mem', 'mem_id'),
+			'item' => array(self::BELONGS_TO, 'Item', 'item_id'),
 		);
 	}
 	/**
@@ -66,18 +66,18 @@ class Practice extends CActiveRecord
 	 */
 	public function setNew($id){
 
-		$mem = new Mem;
-		$doc = Document::model()->findByPk($mem->findDocumentId($id));
+		$item = Item::model()->findByPk($id);
+		$doc = Document::model()->findByPk($item->document_id);
 		if($doc->setting_algoritm == 1)
 			$time = $this->Algo1(time(), 0, $doc);
 		if($doc->setting_algoritm == 666)
 			$time = $this->Algo666(time(), 0, $doc);
 
 		$log = new UserActionLog;
-		$log->log('mem.set_practice_time', $time, $id);
+		$log->log('item.set_practice_time', $time, $id);
 		$practice = new Practice;
 		$practice->user_id = Yii::app()->user->id;
-		$practice->mem_id = $id;
+		$practice->item_id = $id;
 		$practice->time = $time;
 		$practice->save();
 	}
@@ -87,26 +87,25 @@ class Practice extends CActiveRecord
 	 * @param  [type] $memArray [description]
 	 * @return [type]           [description]
 	 */
-	public function updatePracticeTimes($memArray, $docId){
+	public function updatePracticeTimes($itemArray, $docId){
 		$doc = Document::model()->findByPk($docId);
 		$doc->setting_date = strtotime($doc->setting_date);
-		foreach($memArray as $mem){
-
-			$mem = Mem::model()->findByPk($mem['id']);
+		foreach($itemArray as $item){
+			$item = Item::model()->findByPk($item['id']);
 			// delete old ones
-			$p = Practice::model()->findAllByAttributes(array('mem_id' => $mem->id));
+			$p = Practice::model()->findAllByAttributes(array('item_id' => $item->id));
 			foreach($p as $a)
 				$a->delete();
-			// when was the mem made?
+			// when was the item made?
 			$log = UserActionLog::model()->findByAttributes(array(
 				'user_id' => Yii::app()->user->id,
-				'action' => 'mem.create',
-				'target_id' => $mem->id
+				'action' => 'item.create',
+				'target_id' => $item->id
 			));
 			$numb = UserActionLog::model()->findAllByAttributes(array(
 				'user_id' => Yii::app()->user->id,
-				'action' => 'mem.evaluate',
-				'target_id' => $mem->id,
+				'action' => 'item.evaluate',
+				'target_id' => $item->id,
 				'target' => '1'
 			));
 			if(count($numb) == 0){
@@ -124,10 +123,10 @@ class Practice extends CActiveRecord
 				$time = $this->Algo666($log->timestamp, count($numb), $doc, $lastpractice);
 			$practice = new Practice;
 			$practice->user_id = Yii::app()->user->id;
-			$practice->mem_id = $mem->id;
+			$practice->item_id = $item->id;
 			$practice->time = $time;
 			$pdel = Practice::model()->findAllByAttributes(array('user_id' => Yii::app()->user->id, 
-				'mem_id' => $mem->id,
+				'item_id' => $item->id,
 			));
 			foreach ($pdel as $p) {
 				$p->delete();

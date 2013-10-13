@@ -85,33 +85,53 @@ class APIController extends Controller
 	 */
 	public function actionNewMindMap($id){
 		$m = new Document;
-		$this->_sendResponse($m->newMindmap($id));
+		$new = $m->newMindmap($id);
+		if($new['success'] == false)
+			$new = $m->newMindmap(false);
+		else
+			$this->_sendResponse($new['id']);
 	}
 
 	public function actionNewList($id){
 		$m = new Document;
-		$this->_sendResponse($m->newList($id));
+		$new = $m->newList($id);
+		if($new['success'] == false)
+			$new = $m->newMindmap(false);
+		else
+			$this->_sendResponse($new['id']);
 	}
 
 	/*
 		Get mindmap
 	 */ 
-	public function actionGetDocument($id)
+	public function actionGetMindmap($id)
 	{	
 		$doc = new Document;
-		$a = $doc->generateDocument($id);
-		$this->_sendResponse($a);	
+		$doc = $doc->getMindmap($id);
+		if($doc['success'] == true)
+			$this->_sendResponse($doc['result']);	
+		else
+			$this->_sendResponse(false);	
 	}
 
 	public function actionGetItems($id){
-		$item = Item::model()->findAllByAttributes(array('document_id' => $id));
-		$this->_sendResponse($b);
+		$items = Item::model()->findAllByAttributes(array('document_id' => $id));
+		foreach ($items as $item) {
+			$node = MindmapNode::model()->findByPk($item->mindmap_node_id);
+			$r[$node->mm_id]['answer'] = $item->answer;
+			$r[$node->mm_id]['mem'] = $item->mem;
+			$r[$node->mm_id]['term'] = $item->term;
+		}
+		$this->_sendResponse($r);
 	}
 
 	public function actionGetSettings($id){
 		$doc = new Document;
-		$a = $doc->getSettings($id);
-		$this->_sendResponse($a);	
+		$doc = $doc->getSettings($id);
+		if($doc['success'] == true)
+			$this->_sendResponse($doc['result']);	
+		else
+			$this->_sendResponse(false);	
 	}
 
 	public function actionLog($action, $target, $target_id, $timestamp){
@@ -145,6 +165,11 @@ class APIController extends Controller
 	public function actionEmptydb(){
 		$m = new Document;
 		$m->emptyDB();
+	}
+
+	public function actionTest(){
+		$q = Category::model()->findByPk(4);
+		CVarDumper::dump($q->breadcrumbs(), 10, true);
 	}
 
 	private function _sendResponse( $json, $content_type = 'application/json', $status = 200)

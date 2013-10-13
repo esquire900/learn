@@ -1,5 +1,4 @@
 <div style="height:70px"></div>
-<div class="blurbg"></div>
 <div class="container">
 	<div class="row">
 		<div style="height:20px"></div>
@@ -8,11 +7,24 @@
 				<form class="form-horizontal" role="form">
 					<div class="form-group">
 						<label for="inputEmail1" class="col-lg-4 control-label">Date of test</label>
+						
+
 						<div class="col-lg-8">
-							<div class="input-append date" id="dp" data-date="" data-date-format="dd-mm-yyyy">
-								<input ng-model="setting.date" size="16" type="text" value="" placeholder="Date">
-								<span class="add-on"><i class="icon-th"></i></span>
-							</div>
+							<?php Yii::import('application.extensions.CJuiDateTimePicker.CJuiDateTimePicker');
+							    $this->widget('CJuiDateTimePicker',array(
+
+							        'name'=>'eventDate', //attribute name
+							        'mode'=>'datetime', //use "time","date" or "datetime" (default)
+							        'options'=>array(
+							        	'timeFormat' => "hh:mm",
+							        	'dateFormat' => 'dd-mm-yy'
+							        ),  // jquery plugin options
+							        'htmlOptions' => array(
+							        	'ng-model' => 'setting.date',
+							        	'class' => 'form-control'
+							        )
+							    ));
+							?>
 							
 						</div>
 					</div>

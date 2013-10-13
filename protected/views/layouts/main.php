@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link REL="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/assets_web/images/icon.ico"/>
 	<?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
 	<?php Yii::app()->clientScript->registerCoreScript('jquery.ui'); ?>
   
@@ -36,15 +36,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<?php echo Yii::app()->request->baseUrl; ?>">Home</a>
+          <a class="navbar-brand" href="<?php echo Yii::app()->request->baseUrl; ?>">
+          <img src="<?php echo Yii::app()->request->baseUrl; ?>/assets_web/images/icon50.png" height="25px" /> HOME</a>
         </div>
         
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
            
-            <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/overview">Learning Sets</a></li>
-            <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/science">Science</a></li> 
+            <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/overview">LEARN</a></li>
+            <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/science">SCIENCE</a></li> 
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <?php if(Yii::app()->user->isGuest){ ?>
@@ -60,7 +61,6 @@
 
 <!--     <div class="clearme" style="height:70px"></div>
  -->
-    <div style="height:54px"></div>
 
 		<?php echo $content; ?>
 <!-- 

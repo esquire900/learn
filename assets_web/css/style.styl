@@ -4,9 +4,12 @@ GreyLight = #F0F2F5
 GreyDark = #3E3E3E
 Yellow = #F8F2AB
 Green = #BFD841
-Red = #F3754F
+Red = darken(#FF4E51, 20)
 White = #FFFFFF
 Blue = #00ADA7
+
+Primary = #2C3747
+PrimaryButton = #96D9FF
 
 
 /** 
@@ -14,7 +17,7 @@ Blue = #00ADA7
  */
 
 .navbar-default
-    background-color GreyDark
+    background-color Primary
     min-height 60px
     border none
     padding-top 5px
@@ -22,16 +25,22 @@ Blue = #00ADA7
     .navbar-brand
         color white
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus
-    color: GreyLight;
+    background-color: lighten(Primary,10)
+    color white
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus 
-	color: GreyLight;
-
+	background-color: lighten(Primary,10)
+	color white
 .navbar-default .navbar-nav>li>a
     color white
 .navbar-brand    
     font-size 20px
 
+@font-face
+	font-family "museo"
+	src url("../fonts/MuseoSans-300.otf")
 
+.Green
+	color Green
 /**
  * Border radius automated.
  */
@@ -47,14 +56,33 @@ box-shadow()
 
 body
 	overflow-x hidden
+	font-family museo
+html, body{ height: 100%; }
 .greyBackground
-	background-color GreyLight
+	background-color white
 .btn
-	border-radius(0px 0px 0px 0px)
+	border-radius(1px)
+	border none
+	margin-left 2px
 .btn-wide
 	width 100%
-.form-control
- 	border-radius(0px 0px 0px 0px)
+.btn-primary
+	background-color PrimaryButton
+.btn-dark
+	background-color Primary
+	color white
+	&:hover
+		background-color lighten(Primary,20)
+		color white
+.form-control, .input-group-addon
+ 	border-radius(1px)
+.form-control:focus{
+	border-color:Primary;
+	outline:0;
+	-webkit-box-shadow: none !important;
+	box-shadow:none !important
+}
+
 #login-form input {
   margin-top: 20px;
   height: 50px;
@@ -66,45 +94,73 @@ body
   width: 100%;
   font-size: 1.6em;
 }
-.dragcontainer
-	margin-top -70px
 .container
 	width 1000px
-container()
-	width 400px
-	position absolute
+
+/*
+----------------------------------------------Overview Page --------------------------------
+ */
+.header
 	background-color GreyLight
-	box-shadow(0px 2px 2px Grey)
-	padding 15px
-	padding-top 5px
+	padding 10px
+	padding-left 20px
+	font-size 18px
+	border 1px solid lighten(Grey, 20)
+	color GreyDark
+.listContainer
+	.item
+		padding 10px
+		padding-left 20px
+		padding-right 20px
+		font-size 15px
+		border 1px solid lighten(Grey, 20)
+		border-top  none
+		min-height 60px
+		color Primary
+		display: block
+		&:hover
+			background-color lighten(Grey, 30)
+	a
+		color black
+		
+	.btn
+		color white
+	.btns
+		padding-left 54px
+	.delBtn
+		padding-left 30px
+.infoBox
+	background-color Primary
+	padding 20px
+	color white
+	min-height 100px
+.overviewSideBar
+	border-right 1px solid lighten(Grey, 20)
+/*
+---------------------------------------------- Mindmap Page ---------------------------------
+ */
+#mmCtrl
+	overflow hidden
+	height 100%
+
 
 .memContainer
-	container()
-	min-height 250px
-	top 80px
-	left 20px
-	z-index 1005
-
-.untiedMemContainer
-	container()
-	min-height 150px
-	max-height 95%
-	top 80px
-	right 20px
-	overflow:auto;
-	z-index 1005
-.untiedmem
-	padding-top 0px
-	padding-bottom 4px
-	padding-top 4px
-	font-size: 17px
+	border-bottom 1px solid lighten(Grey, 10)
+	// padding-bottom 10px
+	margin-bottom 20px
+.mindmapBar
+	background-color GreyLight
+	color black
+	overflow auto
+	height: 100%
+	padding-right 30px
+	border-left 1px solid lighten(Grey, 10)
+	display block
+	.inner
+		height 100%
+		overflow-y hidden
 .helpContainer
 	container()
-	height 150px
-	top 20px
-	margin-left auto
-	display: block;
-	margin-right auto
 	width 200px
 	z-index 1005
 	position relative
@@ -122,19 +178,12 @@ container()
 	background-color: Green
 	border 0px
 .savebutton-unsaved
-	background-color: Red
+	background-color: Primary
+	color white
 	border 0px
-
-.overviewContainer
-	background-color white
-	box-shadow( 0px 4px 10px rgba(0,0,0,0.2) )
-	border-radius(1px)
-	width:230px
-	height:230px
-	padding:20px
-	margin:10px
-	margin-left 0px
-	float: left
+.savebutton-unsaved:hover
+	background-color: lighten(Primary,10)
+	color white
 
 .question
 	float: none;
@@ -148,6 +197,44 @@ container()
 	padding 20px
 	margin 10px
 	box-shadow( 0px 4px 10px rgba(0,0,0,0.2) )
+.redactor_editor, .redactor_editor:focus
+	min-height 33px !important
+/*
+	---------------------------------- Frontend mindmap -------------------------
+ */
+.mindmap .node-caption:hover {
+  border: 2px dotted GreyLight;
+  padding: 2px;
+}
+
+.mindmap .node-caption.selected {
+  border: 2px solid GreyLight;
+  padding: 2px;
+  z-index: 1000;
+}
+
+.mindmap .node-caption.edit {
+  border: 2px solid Primary;
+}
+
+.mindmap .node-caption.root {
+  cursor: default;
+  background: white;
+  border: 2px solid GreyLight;
+  border-radius: 0px;
+  left: -50px;
+  position: absolute;
+  padding: 4px;
+}
+
+.mindmap .node-caption.root.selected {
+  border-color: GreyLight;
+  height: 80px;
+}
+
+.mindmap .node-caption.root.edit {
+  border-color: Primary
+}
 /*
 	---------------------------------- Practice page -------------------------
  */
@@ -157,20 +244,24 @@ container()
 	height auto
 	min-height 300px
 	padding 20px
-	box-shadow( 0px 4px 10px rgba(0,0,0,0.2) )
+	padding-left 40px
+	padding-right 40px
 	border-radius(1px)
 	margin-top 40px
 
 .writeStatedAnswer
-	background-color GreyLight
+	background-color white
 	min-height 70px
 	padding 20px
 	margin 20px
+	border-right 1px solid Grey
 .writeAnswer
 	background-color white
 	min-height 70px
 	padding 20px
-
+.practiceBackground
+	background-color:lighten(Primary, 10)
+	height:100%;
 /*-----------------------------------------------------------------------------------*/
 /*  PARALAX
 /*-----------------------------------------------------------------------------------*/
@@ -213,4 +304,4 @@ container()
 	padding 20px
 .index-icon
 	font-size: 70px
-	color: Blue
+	color: Primary

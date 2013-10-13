@@ -5,7 +5,7 @@
 		<h1>What do you want to create?</h1>
 		<br><br>
 		<button class="btn btn-primary btn-lg" id="mm">Mindmap</button>
-		<button class="btn btn-primary btn-lg" id="list">List</button>
+		<button class="btn btn-primary btn-lg" id="list" disabled="disabled">List</button>
 	</center>
 </div>
 <script>

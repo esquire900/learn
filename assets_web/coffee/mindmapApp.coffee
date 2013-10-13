@@ -16,7 +16,7 @@ processMindMap = (d, selected) ->
 		}
 	scope.mems[selected.id].term = selected.text.caption
 	scope.saveButton = 'unsaved'
-	scope.savingText = 'Save'
+	scope.savingText = 'Save me!'
 	scope.$apply()
 	scope.update()
 	scope.$apply()
@@ -35,7 +35,6 @@ deleteNode = (id) ->
 MindMapCtrl = ($scope) ->
 	$scope.mems = {}
 	$scope.selected = ''
-	$scope.selectedType = ''
 	$scope.mmArray = []
 	$scope.saveButton = 'normal'
 	$scope.savingText = 'Save'
@@ -61,39 +60,36 @@ MindMapCtrl = ($scope) ->
 	}
 
 	$scope.redactorInit = () ->
+
+		$scope.$apply()
 		$scope.redReady++
 		
 	$scope.update = () ->
-		if $scope.selectedType is 'tied'
-			$scope.answer = $scope.mems[$scope.selected].answer
-			$scope.mem = $scope.mems[$scope.selected].mem
-			$scope.term = $scope.mems[$scope.selected].term
-			
-			# needed to work out some ugly bug 
-			if $scope.redReady >= 2
+		$scope.answer = $scope.mems[$scope.selected].answer
+		$scope.mem = $scope.mems[$scope.selected].mem
+		$scope.term = $scope.mems[$scope.selected].term
+		# needed to work out some ugly bug 
+		if $scope.redReady >= 2
+			if $scope.mem isnt null
 				$('#mem').redactor('set', $scope.mem)
+			if $scope.answer isnt null
 				$('#answera').redactor('set', $scope.answer)
+		null
 
-		if $scope.selectedType is 'untied'
-			$scope.mem = $scope.untiedMems[$scope.selected].mem
-			$scope.term = $scope.untiedMems[$scope.selected].term
-			$scope.answer = $scope.untiedMems[$scope.selected].answer
-			# needed to work out some ugly bug 
-			if $scope.redReady >= 2
-				$('#mem').redactor('set', $scope.untiedMems[$scope.selected].mem)
-				$('#answera').redactor('set', $scope.answer)
-
+	
 
 	$scope.updateArray = () ->
-		if $scope.selectedType is 'tied'
-   
-		    $scope.mems[$scope.selected].mem = $('#mem').redactor('get')
-		    $scope.mems[$scope.selected].answer = $('#answera').redactor('get')
+		if $scope.redReady >= 2
+			if $('#mem').redactor('get') is "<p><span style='color:#BBB;'>Mem</span></p><br>"
+				$('#mem').redactor('set','')
+			else
+		    	$scope.mems[$scope.selected].mem = $('#mem').redactor('get')
 
-		if $scope.selectedType is 'untied'
-			$scope.untiedMems[$scope.selected].term = $scope.term
-			$scope.untiedMems[$scope.selected].mem = $('#mem').redactor('get')
-			$scope.untiedMems[$scope.selected].answer = $('#answera').redactor('get')
+		    if $('#answera').redactor('get') is "<p><span style='color:#BBB;'>Answer</span></p><br>"
+		    	$('#answera').redactor('set','')
+		    else
+		    	$scope.mems[$scope.selected].answer = $('#answera').redactor('get')
+		    
 		return 0
 
 	$scope.sendData = () ->
@@ -122,56 +118,29 @@ MindMapCtrl = ($scope) ->
 					$scope.saveButton = 'saved'
 					$scope.savingText = 'done!'
 					$scope.$apply()
-				$scope.debug += "<br>"+ datar
+				else
+					$scope.debug += datar
 				$scope.$apply()
 			error: (datar) ->
 				$scope.debug += JSON.stringify(datar)
 				$scope.$apply()
-			
-		$scope.debug += "<br>"+ JSON.stringify(data)
+
 		return 0
-	$scope.createUntiedMem = () ->
-		if $scope.newuntied == '' or $scope.newuntied is undefined
-			return 0
-		$scope.untiedMems[$scope.countUntiedId] = {
-			term: $scope.newuntied
-			mem: ''
-			answer: ''
-			id: $scope.countUntiedId
-			new: true
-		}
-		$scope.selectUntied($scope.countUntiedId)
-		$scope.countUntiedId++
-		$scope.newuntied = ''
-		
+
 	$scope.openSettings = () ->
 		$scope.show.mindmap = false
 		$scope.show.settings = true
 
-	$scope.toggleToolbar = (name) ->
-		if $scope.show[name] is true
-			$scope.show[name] = false
-		else
-			$scope.show[name] = true
-		console.log $scope.show['name']
 
 	$scope.hideSettings = () ->
 		$scope.show.mindmap = true
 		$scope.show.settings = false
 
-	$scope.delUntiedMem = (id) ->
-		delete $scope.untiedMems[id]
-
-	$scope.selectUntied = (id) ->
-		$scope.selected = id
-		$scope.selectedType = "untied"
-		$scope.update()
-
 
 	$scope.init = () ->
 		href = window.location.href.split("/mindmap/")
 		id = href[1]
-		if result isnt null
+		if id isnt null
 			url = "../API/getItems?id="+ id
 			$.getJSON url, (data) ->
 				if data.success is false
@@ -191,7 +160,7 @@ MindMapCtrl = ($scope) ->
 					console.log data.message + "false"
 					return 0
 				data = data.data
-				console.log data
+				console.log "settings loaded"
 				
 				$scope.setting = {
 					date: data.settings.date
@@ -204,18 +173,21 @@ MindMapCtrl = ($scope) ->
 				$scope.show.settings = false
 				$scope.show.loading = false
 				$scope.show.toolbar = true
+				console.log $scope.mems
+				$scope.$apply()
+			
 		else
-			$scope.show.mindmap = true
-			$scope.show.settings = false
-			$scope.show.loading = false
-			$scope.show.toolbar = true
+			console.log "No id was set"
 
 	$scope.init()
 	# saves data when user leaves page
 	
-	# loadingOnBeforUnload = false
-	# $(window).on "beforeunload", ->
-	# 	$scope.sendData();
+	alert = false
+	$(window).on "beforeunload", ->
+		if(scope.saveButton is 'unsaved')
+			$scope.sendData()
+			if(alert is true)
+				return 0
 		
 	return 0
  

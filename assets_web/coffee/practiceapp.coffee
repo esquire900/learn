@@ -27,13 +27,14 @@ PracticeCtrl = ($scope) ->
 				$scope.$apply()
 
 	$scope.loadQuestions = () ->
-		$scope.id = ~~window.location.search.replace("?id=",'')
+		href = window.location.href.split("/practice/")
+		$scope.id = href[1]
 
-		if typeof $scope.id isnt "number" or $scope.id is 0
+		if $scope.id is 0
 			$scope.notify('No id is set in the url, you sure you came here the right way?', 'info')
 			return 0
 
-		url = "API/getQuestions?id="+$scope.id
+		url = "../API/getQuestions?id="+$scope.id
 		$.getJSON url, (data) ->
 			if data.success is false
 				$scope.notify data.message, 'danger'
@@ -87,6 +88,7 @@ PracticeCtrl = ($scope) ->
 			$scope.hideAll()
 			$scope.show.buttonsQuestion = true
 			$scope.show.question = true
+			$scope.show.thinkField = true
 		else if q.questionMethod is "write"
 			$scope.hideAll()
 			$scope.show.question = true
@@ -147,6 +149,7 @@ PracticeCtrl = ($scope) ->
 			buttonsQuestion: false
 			writeField: false
 			writeAnswer: false
+			thinkField: false
 		}
 		
 	$scope.hideAll()

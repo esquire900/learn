@@ -73,6 +73,7 @@ mindmaps.ApplicationController = function() {
    * event bus.
    */
   this.init = function() {
+    console.log("init");
     var newDocumentCommand = commandRegistry
         .get(mindmaps.NewDocumentCommand);
     newDocumentCommand.setHandler(doNewDocument);
@@ -114,21 +115,7 @@ mindmaps.ApplicationController = function() {
     var viewController = new mindmaps.MainViewController(eventBus,
         mindmapModel, commandRegistry);
     viewController.go();
-    //custom code
-    if(typeof documentIsAlreadyOpenened === 'undefined'){
-      var str = window.location.href;
-      var id = str.split( "mindmap/");
-      if( !isNaN(parseFloat(id[1])) ){
-        $.getJSON('../API/getMindMap?id='+id[1], function(data)
-        {
-          doc = mindmaps.Document.fromObject(data.data);
-          mindmapModel.setDocument(doc); 
-          var documentIsAlreadyOpenened = true; 
-        });
-      }else{
-        doNewDocument();
-      } 
-    }
+
 
   };
   var urlParam = function(name){
@@ -137,5 +124,27 @@ mindmaps.ApplicationController = function() {
         return 0;
       return results[1] || 0;
   }
-  this.init();
+
+
+  this.testGo = function(){
+    //custom code
+    if(typeof documentIsAlreadyOpenened === 'undefined'){
+      var str = window.location.href;
+      var id = str.split( "mindmap/");
+
+      if( !isNaN(parseFloat(id[1])) ){
+        console.log(id[1]);
+        var url = 'http://localhost/learn/API/getMindMap?id='+id[1];
+        $.getJSON(url, function(data)
+        {
+          doc = mindmaps.Document.fromObject(data.data);
+          mindmapModel.setDocument(doc); 
+          var documentIsAlreadyOpenened = true; 
+        });
+      }
+    }
+  }
+
+  this.testGo();
+  // this.init();
 };

@@ -101,6 +101,11 @@ class Category extends CActiveRecord
 		));
 	}
 
+	/**
+	 * Gets the top parent of a category object
+	 * @param  Category object $obj can be empty, in which case $this object wioll be used
+	 * @return Category object      The topparent object
+	 */
 	public function getTopParent($obj = NULL){
 		if($obj === NULL) $obj = $this;
 		if($obj->parent_id != NULL){
@@ -111,12 +116,24 @@ class Category extends CActiveRecord
 		}
 	}
 
+	/**
+	 *  Gets all the childrens objects of a category object
+	 * @param  Category object $obj can be empty, in which case $this object wioll be used
+	 * @return array      array with all the results
+	 */
 	public function getChildren($obj = NULL){
 		if($obj === NULL) $obj = $this;
 		$children = Category::model()->findAllByAttributes(array('parent_id' => $obj->id));
 		return $children;
 	}
 
+	/**
+	 * Adds a child category to a parent
+	 * @param text $name name of new category
+	 * @param text $info info of new category
+	 * @param category object $obj  can be NULL, in which case $this will be used.
+	 * @return   false if unsuccessfull, otherwise the child id which was created
+	 */
 	public function addChild($name, $info, $obj = NULL){
 		if($obj === NULL) $obj = $this;
 		$child = new Category;
@@ -134,12 +151,19 @@ class Category extends CActiveRecord
 			return false;
 	}
 
-	public function deleteCategory($obj = NULL){
-		if($obj === NULL) $obj = $this;
-		if(Yii::app()->user->id !== $obj->user_id)
-			return false;
-		else
-			$obj->delete();
-		return true;
+	/**
+	 * Creates a breadcrumb array, used to display the breadcrumb bar in the overview page
+	 * @return array urls and name (name1 => url1, etc)
+	 */
+	public function breadcrumbs(){
+		if($this->parent_id != null){
+			$parent = Category::model()->findByPk($this->parent_id);
+			$result = $parent->breadcrumbs();
+			$url = Yii::app()->createUrl('overview/'.$this->id);
+			$return = array_merge($result, array($this->name => $url));
+			return $return;
+		}
+		$url = Yii::app()->createUrl('overview/'.$this->id);
+		return array('BaseFolder' => Yii::app()->createUrl('overview'), $this->name => $url);
 	}
 }

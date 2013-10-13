@@ -127,7 +127,6 @@ class Item extends CActiveRecord
 	/**
 	 * Saves the items feeded in the array
 	 * @param  array $array items that need to be saved
-	 * @param  string $new   weather the document is new or not, needed to check what to delete and what not
 	 * @return bool        wheather saving succeeded or not
 	 */
 	public function saveMindmapItems($array, $docId)
@@ -194,6 +193,14 @@ class Item extends CActiveRecord
 			if(isset($logCreate))
 				$log->log('item.create', 'item', $newItem->id);
 
+			// check if create log actually exists
+			$logcheck = UserActionLog::model()->findAllByAttributes(array(
+				'user_id' => Yii::app()->user->id,
+				'action' => 'item.create',
+				'target_id' => $newItem->id,
+			));
+			if(count($logcheck) == 0)
+				$log->log('item.create', 'item', $newItem->id);
 			// unset the items in the complete array, so items left in $allitems need to be deleted
 			if(($key = array_search($newItem->id, $allitems)) !== false) 
 			    unset($allitems[$key]);

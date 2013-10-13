@@ -80,6 +80,23 @@ class Document extends CActiveRecord
 	}
 
 	/**
+	 * Returns the name of the document
+	 * @return string name of doc
+	 */		
+	public function getName(){
+		if($this->title == ''){
+			$i = Item::model()->findByAttributes(array(
+				'user_id' => Yii::app()->user->id,
+				'document_id' => $this->id,
+				'parent_id' => NULL
+			));
+			return $i->term;
+		}else{
+			return $this->title;
+		}
+	}
+
+	/**
 	 * Saves the document
 	 * @param  array $array    array with the complete tree, defined by the js mindmap front-end
 	 * @param  array $settings settings array
@@ -120,7 +137,7 @@ class Document extends CActiveRecord
 	 * @param  int $id id of the document that needs to be exported
 	 * @return array     array(succes, message or result)
 	 */
-	public function generateMindmap($id){
+	public function getMindmap($id){
 		$result = array();
 		$doc = Document::model()->findByPk($id);
 		if(count($doc) == 0)
@@ -135,7 +152,6 @@ class Document extends CActiveRecord
 		$result['dates']['created'] = time();
 		$result['dimensions']['x'] = intval($doc->dimension_x);
 		$result['dimensions']['y'] = intval($doc->dimension_y);
-		$result['settings']['category_id'] = $doc->category_id;
 		$result['autosave'] = false;
 
 		return array('success' => true, 'result' => $result);
@@ -153,6 +169,7 @@ class Document extends CActiveRecord
 		$result['settings']['infinite'] = $doc->setting_infinite;
 		$result['settings']['algoritm'] = $doc->setting_algoritm;
 		$result['settings']['target_percentage'] = $doc->setting_target_percentage;
+		$result['settings']['category_id'] = $doc->category_id;
 
 		return array('success' => true, 'result' => $result);
 	}
@@ -161,30 +178,18 @@ class Document extends CActiveRecord
 	 * @return int [description]
 	 */
 	public function practiceCount(){
-		// $ret = 0;
-		// $items = new Item;
-		// $items = $items->getitems($this->id, false);
-		// if($items == false) return false;
-		// $first = 10000000000000;
-		// foreach ($items as $i => $item) {
-		// 	$practice = Practice::model()->findByAttributes(array('item_id' => $i));
-		// 	if(count($practice) > 0){
-		// 		if($practice->time < time()){
-		// 			$ret ++;
-		// 		}
-		// 		if($practice->time < $first)
-		// 			$first = $practice->time;
-		// 	}
-			
-		// }
-		// if($ret == 0 && $first != 10000000000000){
-		// 	$hours = round(($first - time()) / (60*60),2);
-		// 	$ret = "First practice in ".$hours." hours";
-		// }else{
-		// 	$ret = "# items to practice: ".$ret;
-		// }
-		// return $ret;
-		return "0 to practice (mockup)";
+		$q = new Question;
+		$q = $q->generate($this->id);
+		$count = count($q);
+		if($count == 0){
+			// $criteria = new CDbCriteria;
+			// $criteria->condition('user_id='. Yii::app()->user->id);
+			// $criteria->condition(
+			// Practice::model()->find($criteria);
+			return "Nothing yet.";
+		}else{
+			return "You've got ".$count." items left to practice.";
+		}
 	}
 
 	public function deleteDocument($id){
@@ -230,7 +235,7 @@ class Document extends CActiveRecord
 		$m->dimension_x = 2000;
 		$m->dimension_y = 4000;
 		$m->user_id = Yii::app()->user->id;
-		$m->setting_date = NULL;
+		$m->setting_date = date("d-m-Y H:i:s", time());
 		$m->setting_algoritm = '1';
 		if($m->save())
 			return $m->id;
@@ -251,9 +256,9 @@ class Document extends CActiveRecord
 			substr(str_shuffle("0123456789abcdef"), 0, 8);
 		$m->title = '';
 		$m->dimension_x = 2000;
-		$m->dimension_y = 4000;
+		$m->dimension_y = 2000;
 		$m->user_id = Yii::app()->user->id;
-		$m->setting_date = NULL;
+		$m->setting_date = date("d-m-Y H:i:s", time());
 		$m->setting_algoritm = '1';
 		if($m->save()){
 			$n = new MindmapNode;
@@ -264,6 +269,7 @@ class Document extends CActiveRecord
 			substr(str_shuffle("0123456789abcdef"), 0, 4)."-".
 			substr(str_shuffle("0123456789abcdef"), 0, 8);
 			$n->offset_x = 0;
+			$n->font_size = 18;
 			$n->offset_y = 0;
 			$n->branch_color = '#ffffff';
 			$n->document_id = $m->id;

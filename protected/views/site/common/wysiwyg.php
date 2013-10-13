@@ -33,7 +33,9 @@
         // 'paragraphy' => false,
         'changeCallback' => new CJavaScriptExpression('function(html){scope.updateArray();}'),
         'initCallback' => new CJavaScriptExpression('function(html){scope.redactorInit();}'),
+        // 'focusCallback' => new CJavaScriptExpression("function(e){if(this.get() == '<span style=\"color:#BBB;\">Answer</span><br>');this.set('<br>');}"),
         'linebreaks' => true,
+        'air' => true,
 	);
 	
 	$this->widget('ImperaviRedactorWidget', array(

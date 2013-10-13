@@ -1,3 +1,4 @@
+<?php if(isset($_GET['id'])) $getId = $_GET['id'];else $getId = '0';?>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-dialog">
@@ -9,7 +10,7 @@
 	<div class="modal-body">
 		<p>You can create a new folder here.</p>
 		<form action="<?php echo Yii::app()->createUrl('category/create'); ?>" method="get">
-			<input type="hidden" id="parent_id" name="parent_id" value="$getId">
+			<input type="hidden" id="parent_id" name="parent_id" value="<?php echo $getId; ?>">
 			<input type="text" class="form-control" id="name" name="name" placeholder="Name">
 			<br>
 			<textarea name="info" id="info" cols="5" rows="2" class="form-control" placeholder="Extra info (not required)"></textarea>

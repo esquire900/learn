@@ -54,9 +54,30 @@ mindmaps.Util.randomColor = function() {
   // return '#'+~~(Math.random()*(1<<24)).toString(16);
 
   // http://paulirish.com/2009/random-hex-color-code-snippets/#comment-34878
-  return (function(h) {
-    return '#000000'.substr(0, 7 - h.length) + h;
-  })((~~(Math.random() * (1 << 24))).toString(16));
+  // custom code, colors
+  var colors = new Array(
+    '#FF4E51',
+    '#5397AB',
+    '#7DE6FF',
+    '#A4E670',
+    '#B3EECC',
+    '#00ADA7',
+    '#FFB511', // orange
+    '#72CDF4', // lightblue
+    '#FF4E51', //pinkish red agressive
+    '#A4E670', // fresh green
+    '#00ADA7', // navy blue
+    '#74CEB7', // soft blue
+    '#65CE41', // fresh dark green
+    '#CC4F4B', // soft red
+    '#88BE7A', // muted green
+    '#1FA3C0' // darker blue muted
+
+  )
+  return colors[Math.floor(Math.random() * colors.length)];
+  // return (function(h) {
+  //   return '#000000'.substr(0, 7 - h.length) + h;
+  // })((~~(Math.random() * (1 << 24))).toString(16));
 };
 
 

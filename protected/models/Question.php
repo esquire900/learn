@@ -19,7 +19,6 @@ class Question
 		$this->questionOptions();
 		$this->removePracticeElements();
 		$this->createQuestions();
-		// CVarDumper::dump($this->questions, 10, true); exit();
 		return $this->questions;
 	}
 
@@ -28,7 +27,7 @@ class Question
 		$this->getElements();
 		$this->questionOptions();
 		foreach ($this->questionElements as $id => $element) {
-			$c = Practice::model()->findByAttributes(array('user_id' => Yii::app()->user->id, 'mem_id' => $id));
+			$c = Practice::model()->findByAttributes(array('user_id' => Yii::app()->user->id, 'item_id' => $id));
 			$p = new Practice;
 			if(count($c) == 0)
 			{
@@ -44,10 +43,11 @@ class Question
 	 * @return nothing, results set in $this->elements
 	 **/
 	public function getElements(){
-		$items = Item::model()->findAllByAttributes(array('document_id' => $this->documentId));
+		$itemsQ = Item::model()->findAllByAttributes(array('document_id' => $this->documentId));
 
-		foreach ($items as $i=>$item) {
-			$practice = Practice::model()->findByAttributes(array('mem_id' => $i));
+		foreach ($itemsQ as $item) {
+			$i = $item->id;
+			$practice = Practice::model()->findByAttributes(array('item_id' => $i));
 			$items[$i]['practice'] = $practice;
 
 			// parent
@@ -58,13 +58,16 @@ class Question
 			$items[$i]['parent'] = $parent;
 
 			$items[$i]['children'] = array();
-			foreach ($items as $x => $m) {
+			foreach ($itemsQ as $x => $m) {
 				if($m['parent_id'] == $i)
 					$items[$i]['children'][] = $m;
 			}
 
 			$items[$i]['hashbangs'] = array();
 			// filter the !hashbangs
+			$items[$i]['answer'] = $item->answer;
+			$items[$i]['mem'] = $item->mem;
+			$items[$i]['term'] = $item->term;
 			foreach ($this->hashbangContacts as $hb) {
 				if(strstr($items[$i]['answer'], $hb) != false){
 					$items[$i]['answer'] = str_replace($hb, '', $items[$i]['answer']);
@@ -98,6 +101,7 @@ class Question
 				continue; // has no answer and no children, so nothing to ask about element
 			$this->questionElements[$id] = $element;
 		}
+
 	}
 
 	/**
@@ -133,6 +137,7 @@ class Question
 			$r['questions'] = $questions;
 			$this->questions[] = $r;
 		}
+
 		shuffle($this->questions);
 	}
 
