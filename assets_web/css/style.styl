@@ -4,12 +4,13 @@ GreyLight = #F0F2F5
 GreyDark = #3E3E3E
 Yellow = #F8F2AB
 Green = #BFD841
+GreenDark = #369B38
 Red = darken(#FF4E51, 20)
 White = #FFFFFF
 Blue = #00ADA7
 
 Primary = #2C3747
-PrimaryButton = #96D9FF
+PrimaryButton = #45B0E3 /*darken(#96D9FF,10)
 
 
 /** 
@@ -34,11 +35,22 @@ PrimaryButton = #96D9FF
     color white
 .navbar-brand    
     font-size 20px
-
+.nav-justified
+	>li >a
+		color white
+		padding-top 10px
+	>li >a:hover, >li > a:focus
+		background-color: lighten(Primary,10)
+		color white
 @font-face
 	font-family "museo"
 	src url("../fonts/MuseoSans-300.otf")
 
+@font-face
+	font-family "nexa"
+	src url("../fonts/Nexa Light.otf")
+a:hover
+	text-decoration none
 .Green
 	color Green
 /**
@@ -57,7 +69,9 @@ box-shadow()
 body
 	overflow-x hidden
 	font-family museo
+	font-size 15px
 html, body{ height: 100%; }
+
 .greyBackground
 	background-color white
 .btn
@@ -82,7 +96,9 @@ html, body{ height: 100%; }
 	-webkit-box-shadow: none !important;
 	box-shadow:none !important
 }
-
+h1,h2,h3,h4,h5
+	font-family museo
+	font-weight 500
 #login-form input {
   margin-top: 20px;
   height: 50px;
@@ -96,7 +112,11 @@ html, body{ height: 100%; }
 }
 .container
 	width 1000px
-
+.footer
+	padding-top 20px
+	height 60px
+	background-color Primary
+	color white
 /*
 ----------------------------------------------Overview Page --------------------------------
  */
@@ -266,20 +286,22 @@ html, body{ height: 100%; }
 /*  PARALAX
 /*-----------------------------------------------------------------------------------*/
 .parallax {
-    text-align: center;
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color: white;
-    min-height: 400px;
+    min-height: 100%;
     margin: 0 auto;
     overflow: hidden;
     padding: 0;
     background-attachment: fixed;
     background-position: 50% 0;
     background-repeat: no-repeat;
-    border-bottom 5px solid GreyDark
+    margin-bottom -50px
+    padding-top 70px
+    background-image url("../images/clean5.jpg")
 }
 .parallax .inner {
     padding: 0;
@@ -289,13 +311,14 @@ html, body{ height: 100%; }
     background-attachment: scroll !important;
 }
 
-.parallax h1 {
+.parallax h1 , h3{
     color: #ededed;
-    font-weight: 900;
-    font-size: 60px;
-    line-height: 60px;
+    // font-weight: 900;
+    // font-size: 60px;
+
     display: block;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+    font-family nexa
 }
 
 .header-text
@@ -303,5 +326,150 @@ html, body{ height: 100%; }
 	background-color rgba(0,0,0,0.4)
 	padding 20px
 .index-icon
-	font-size: 70px
-	color: Primary
+	color: GreenDark
+
+/*
+---------------------------------------------- SOCIAL BUTTONS -----------------------------------------
+ */
+
+@import url("http://fonts.googleapis.com/css?family=Oswald");
+
+
+/* Facebook */
+btnHeight = 60px
+btnHeightm = btnHeight * -1
+btnWidth = 250px
+smlWidth = 60px
+.fb-icon-bg 
+	background: #354f88;
+	height: btnHeight;
+	margin: 0 0 btnHeightm 0;
+	width: smlWidth; 
+	i
+		display:inline-block;
+		font-size: 40px;
+		line-height: btnHeight;
+		color:white;
+		width: btnHeight;
+		height: btnHeight;
+		text-align: center;
+		vertical-align: bottom;
+	    
+
+
+.fb-bg {
+	background: #3b5998;
+	display: block;
+	height: btnHeight;
+	margin: 0 0 30px smlWidth;
+	width: btnWidth; 
+}
+
+.fb-bg:after {
+	color: #fff;
+	content: "Sign in with facebook";
+	font-family: museo 
+	height: btnHeight;
+	font-size 20px
+	left: 2%;
+	position: relative;
+	top: 25%;
+	width: smlWidth; 
+}
+
+.fb-bg:hover{
+  cursor: pointer;
+}
+
+.fb-bg:active{
+  background: #354f88;
+}
+
+/* Twitter */
+
+.twi-icon-bg 
+	background: #40a2d1;
+	height: btnHeight;
+	margin: 0 0 btnHeightm 0;
+	width: smlWidth; 
+	i
+		display:inline-block;
+		font-size: 40px;
+		line-height: btnHeight;
+		color:white;
+		width: btnHeight;
+		height: btnHeight;
+		text-align: center;
+		vertical-align: bottom;
+	    
+.twi-bg {
+	background: #45b0e3;
+	height: btnHeight;
+	margin: 0 0 30px smlWidth;
+	width: btnWidth; 
+}
+ 
+.twi-bg:after {
+	color: #fff;
+	content: "Sign in with twitter";
+	font-family: museo 
+	height: btnHeight;
+	font-size 20px
+	left: 2%;
+	position: relative;
+	top: 25%;
+	width: smlWidth; 
+}
+
+.twi-bg:hover {
+  cursor: pointer;
+}
+
+.twi-bg:active {
+  background: #40a2d1;
+}
+
+/* Google+ */
+
+.g-icon-bg 
+	background: GreenDark;
+	height: btnHeight;
+	margin: 0 0 btnHeightm 0;
+	width: smlWidth; 
+	i
+		display:inline-block;
+		font-size: 40px;
+		line-height: btnHeight;
+		color:white;
+		width: btnHeight;
+		height: btnHeight;
+		text-align: center;
+		vertical-align: bottom;
+	    
+ 
+.g-bg {
+	background: lighten(GreenDark,7);
+	height: btnHeight;
+	margin-left: smlWidth;
+	width: btnWidth; 
+}
+ 
+.g-bg:after {
+	color: #fff;
+	content: "Sign in with google";
+	font-family: museo 
+	height: btnHeight;
+	font-size 20px
+	left: 2%;
+	position: relative;
+	top: 25%;
+	width: smlWidth; 
+}
+
+.g-bg:hover {
+  cursor: pointer;
+}
+
+.g-bg:active {
+  background: #ce3e26;
+}

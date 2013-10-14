@@ -18,6 +18,12 @@ class SiteController extends Controller
 			'page'=>array(
 				'class'=>'CViewAction',
 			),
+			'oauth' => array(
+		      'class'=>'ext.hoauth.HOAuthAction',
+		    ),
+		    'oauthadmin' => array(
+		      'class'=>'ext.hoauth.HOAuthAdminAction',
+		    ),
 		);
 	}
 

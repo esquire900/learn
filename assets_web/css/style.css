@@ -1,3 +1,6 @@
+/*darken(#96D9FF,10)
+
+
 /** 
  * Navbar
  */
@@ -27,9 +30,25 @@
 .navbar-brand {
   font-size: 20px;
 }
+.nav-justified >li >a {
+  color: #fff;
+  padding-top: 10px;
+}
+.nav-justified >li >a:hover,
+.nav-justified >li > a:focus {
+  background-color: #404f66;
+  color: #fff;
+}
 @font-face {
   font-family: "museo";
   src: url("../fonts/MuseoSans-300.otf");
+}
+@font-face {
+  font-family: "nexa";
+  src: url("../fonts/Nexa Light.otf");
+}
+a:hover {
+  text-decoration: none;
 }
 .Green {
   color: #bfd841;
@@ -40,6 +59,7 @@
 body {
   overflow-x: hidden;
   font-family: museo;
+  font-size: 15px;
 }
 html,
 body {
@@ -59,7 +79,7 @@ body {
   width: 100%;
 }
 .btn-primary {
-  background-color: #96d9ff;
+  background-color: #45b0e3;
 }
 .btn-dark {
   background-color: #2c3747;
@@ -83,6 +103,14 @@ body {
   -moz-box-shadow: none !important;
   box-shadow: none !important;
 }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: museo;
+  font-weight: 500;
+}
 #login-form input {
   margin-top: 20px;
   height: 50px;
@@ -96,6 +124,12 @@ body {
 }
 .container {
   width: 1000px;
+}
+.footer {
+  padding-top: 20px;
+  height: 60px;
+  background-color: #2c3747;
+  color: #fff;
 }
 /*
 ----------------------------------------------Overview Page --------------------------------
@@ -284,20 +318,21 @@ body {
 /*  PARALAX
 /*-----------------------------------------------------------------------------------*/
 .parallax {
-  text-align: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   color: #fff;
-  min-height: 400px;
+  min-height: 100%;
   margin: 0 auto;
   overflow: hidden;
   padding: 0;
   background-attachment: fixed;
   background-position: 50% 0;
   background-repeat: no-repeat;
-  border-bottom: 5px solid #3e3e3e;
+  margin-bottom: -50px;
+  padding-top: 70px;
+  background-image: url("../images/clean5.jpg");
 }
 .parallax .inner {
   padding: 0;
@@ -305,13 +340,12 @@ body {
 .parallax.mobile {
   background-attachment: scroll !important;
 }
-.parallax h1 {
+.parallax h1,
+h3 {
   color: #ededed;
-  font-weight: 900;
-  font-size: 60px;
-  line-height: 60px;
   display: block;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+  font-family: nexa;
 }
 .header-text {
   color: #fff;
@@ -319,6 +353,130 @@ body {
   padding: 20px;
 }
 .index-icon {
-  font-size: 70px;
-  color: #2c3747;
+  color: #369b38;
+}
+/*
+---------------------------------------------- SOCIAL BUTTONS -----------------------------------------
+ */
+@import url("http://fonts.googleapis.com/css?family=Oswald");
+/* Facebook */
+.fb-icon-bg {
+  background: #354f88;
+  height: 60px;
+  margin: 0 0 -60px 0;
+  width: 60px;
+}
+.fb-icon-bg i {
+  display: inline-block;
+  font-size: 40px;
+  line-height: 60px;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  vertical-align: bottom;
+}
+.fb-bg {
+  background: #3b5998;
+  display: block;
+  height: 60px;
+  margin: 0 0 30px 60px;
+  width: 250px;
+}
+.fb-bg:after {
+  color: #fff;
+  content: "Sign in with facebook";
+  font-family: museo;
+  height: 60px;
+  font-size: 20px;
+  left: 2%;
+  position: relative;
+  top: 25%;
+  width: 60px;
+}
+.fb-bg:hover {
+  cursor: pointer;
+}
+.fb-bg:active {
+  background: #354f88;
+}
+/* Twitter */
+.twi-icon-bg {
+  background: #40a2d1;
+  height: 60px;
+  margin: 0 0 -60px 0;
+  width: 60px;
+}
+.twi-icon-bg i {
+  display: inline-block;
+  font-size: 40px;
+  line-height: 60px;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  vertical-align: bottom;
+}
+.twi-bg {
+  background: #45b0e3;
+  height: 60px;
+  margin: 0 0 30px 60px;
+  width: 250px;
+}
+.twi-bg:after {
+  color: #fff;
+  content: "Sign in with twitter";
+  font-family: museo;
+  height: 60px;
+  font-size: 20px;
+  left: 2%;
+  position: relative;
+  top: 25%;
+  width: 60px;
+}
+.twi-bg:hover {
+  cursor: pointer;
+}
+.twi-bg:active {
+  background: #40a2d1;
+}
+/* Google+ */
+.g-icon-bg {
+  background: #369b38;
+  height: 60px;
+  margin: 0 0 -60px 0;
+  width: 60px;
+}
+.g-icon-bg i {
+  display: inline-block;
+  font-size: 40px;
+  line-height: 60px;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  vertical-align: bottom;
+}
+.g-bg {
+  background: #3fb542;
+  height: 60px;
+  margin-left: 60px;
+  width: 250px;
+}
+.g-bg:after {
+  color: #fff;
+  content: "Sign in with google";
+  font-family: museo;
+  height: 60px;
+  font-size: 20px;
+  left: 2%;
+  position: relative;
+  top: 25%;
+  width: 60px;
+}
+.g-bg:hover {
+  cursor: pointer;
+}
+.g-bg:active {
+  background: #ce3e26;
 }

@@ -8,7 +8,7 @@
   <link REL="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/assets_web/images/icon.ico"/>
 	<?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
 	<?php Yii::app()->clientScript->registerCoreScript('jquery.ui'); ?>
-  
+  <title><?php echo Yii::app()->name; ?> - <?php echo $this->pageTitle; ?></title>
 	<link href="<?php echo Yii::app()->request->baseUrl; ?>/assets_web/css/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	 
 
@@ -43,15 +43,13 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
-           
             <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/overview">LEARN</a></li>
-            <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/science">SCIENCE</a></li> 
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <?php if(Yii::app()->user->isGuest){ ?>
-                <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/login">Login</a></li> 
+                <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/login">LOGIN</a></li> 
               <?php }else{ ?>
-                <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/profile"><?php echo Yii::app()->user->name; ?></a></li> 
+                <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/user/profile"><?php echo strtoupper(Yii::app()->user->name); ?></a></li> 
                <?php } ?>
 
 

@@ -20552,3 +20552,89 @@ Stack trace:
 REQUEST_URI=/learn/overview?search=test
 in W:\learn\protected\controllers\CategoryController.php (42)
 in W:\learn\index.php (15)
+2013/10/14 18:10:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets_web/fonts/Nexa.otf".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('assets_web/font...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/assets_web/fonts/Nexa.otf
+HTTP_REFERER=http://localhost/learn/assets_web/css/style.css
+---
+2013/10/14 18:10:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets_web/fonts/Nexa.otf".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('assets_web/font...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/assets_web/fonts/Nexa.otf
+HTTP_REFERER=http://localhost/learn/assets_web/css/style.css
+---
+2013/10/14 18:10:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets_web/fonts/Nexa Regular.otf".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('assets_web/font...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/assets_web/fonts/Nexa%20Regular.otf
+HTTP_REFERER=http://localhost/learn/assets_web/css/style.css
+---
+2013/10/14 20:05:52 [error] [exception.CException] exception 'CException' with message 'The config.php file doesn't exists' in W:\learn\protected\extensions\hoauth\models\UserOAuth.php:106
+Stack trace:
+#0 W:\learn\protected\extensions\hoauth\widgets\HOAuth.php(51): UserOAuth::getConfig()
+#1 W:\framework\web\CBaseController.php(173): HOAuth->run()
+#2 W:\learn\protected\views\site\login.php(25): CBaseController->widget('ext.hoauth.widg...')
+#3 W:\framework\web\CBaseController.php(126): require('W:\learn\protec...')
+#4 W:\framework\web\CBaseController.php(95): CBaseController->renderInternal('W:\learn\protec...', Array, true)
+#5 W:\framework\web\CController.php(869): CBaseController->renderFile('W:\learn\protec...', Array, true)
+#6 W:\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#7 W:\learn\protected\controllers\SiteController.php(78): CController->render('login', Array)
+#8 W:\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 W:\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 W:\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 W:\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 W:\framework\web\CWebApplication.php(282): CController->run('login')
+#13 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 W:\learn\index.php(15): CApplication->run()
+#16 {main}
+REQUEST_URI=/learn/login
+HTTP_REFERER=http://localhost/learn/user/profile
+---
+2013/10/14 20:06:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login/oauthadmin".' in W:\framework\web\CWebApplication.php:286
+Stack trace:
+#0 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('login/oauthadmi...')
+#1 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 W:\learn\index.php(15): CApplication->run()
+#3 {main}
+REQUEST_URI=/learn/login/oauthadmin
+---
+2013/10/14 20:06:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "oauthadmin".' in W:\framework\web\CController.php:483
+Stack trace:
+#0 W:\framework\web\CController.php(270): CController->missingAction('oauthadmin')
+#1 W:\framework\web\CWebApplication.php(282): CController->run('oauthadmin')
+#2 W:\framework\web\CWebApplication.php(141): CWebApplication->runController('user/login/oaut...')
+#3 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 W:\learn\index.php(15): CApplication->run()
+#5 {main}
+REQUEST_URI=/learn/user/login/oauthadmin
+---
+2013/10/14 20:07:33 [error] [php] Invalid argument supplied for foreach() (W:\learn\protected\extensions\hoauth\widgets\HOAuth.php:57)
+Stack trace:
+#0 W:\framework\web\CBaseController.php(126): require()
+#1 W:\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#2 W:\framework\web\CController.php(869): SiteController->renderFile()
+#3 W:\framework\web\CController.php(782): SiteController->renderPartial()
+#4 W:\learn\protected\controllers\SiteController.php(78): SiteController->render()
+#5 W:\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#6 W:\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 W:\framework\web\CController.php(286): SiteController->runAction()
+#8 W:\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 W:\framework\web\CWebApplication.php(282): SiteController->run()
+#10 W:\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 W:\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 W:\learn\index.php(15): CWebApplication->run()
+REQUEST_URI=/learn/login
+in W:\learn\protected\extensions\hoauth\widgets\HOAuth.php (57)
+in W:\learn\protected\views\site\login.php (25)
+in W:\learn\protected\controllers\SiteController.php (78)

@@ -1,12 +1,10 @@
 <?php 
-$this->pageTitle=Yii::app()->name." - learning sets";
+$this->pageTitle="learning sets";
 
 if(isset($_GET['id'])) $getId = $_GET['id'];else $getId = '0';?>
 <div class="container">
 	<div class="clear" style="height:70px"></div>
 	<center>
-		
-
 		<?php $this->renderPartial('newmodal'); ?>
 	</center>
 	

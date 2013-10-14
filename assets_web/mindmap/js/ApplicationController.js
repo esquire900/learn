@@ -134,7 +134,7 @@ mindmaps.ApplicationController = function() {
 
       if( !isNaN(parseFloat(id[1])) ){
         console.log(id[1]);
-        var url = 'http://localhost/learn/API/getMindMap?id='+id[1];
+        var url = '../API/getMindMap?id='+id[1];
         $.getJSON(url, function(data)
         {
           doc = mindmaps.Document.fromObject(data.data);

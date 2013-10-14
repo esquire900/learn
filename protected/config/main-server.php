@@ -16,9 +16,10 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
-                'application.modules.user.models.*',
-                'application.modules.user.components.*',
-
+        'application.modules.user.models.*',
+        'application.modules.user.components.*',
+        'application.modules.rights.*',
+        'application.modules.rights.components.*',
 	),
 
 	'modules'=>array(
@@ -81,9 +82,17 @@ return array(
             'rules' => array(
                 'home'=>'site/index',
                 //'<view>'=>array('site/page'),
-                '<action>' => 'site/<action>',
                 'overview' => 'category/index',
+                'overview/<id:\d+>' => 'category/index',
+                '<action>' => 'site/<action>',
+                '<action>/<id:\d+>' => 'site/<action>',
+
             ),
+        ),
+        'authManager'=>array(
+            'class'=>'RDbAuthManager',
+            'connectionID'=>'db',
+            'defaultRoles'=>array('Authenticated', 'Guest'),
         ),
 
 
@@ -124,4 +133,5 @@ return array(
 		'adminEmail'=>'webmaster@example.com',
 		'bodyBackgroundClass' => 'greyBackground'
 	),
+	'sourceLanguage'=>'en',
 );
